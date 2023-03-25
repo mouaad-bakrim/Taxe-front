@@ -1,1 +1,42 @@
-<p>local-create works!</p>
+<div class="card">
+  <div class="card-header" style="background-color: lightblue">Gestion Locale</div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label>Reference: </label>
+      <input type="text" class="form-control" [(ngModel)]="local.ref">
+    </div>
+
+    <div class="form-group">
+      <label>cin: </label>
+      <input type="text" class="form-control" [(ngModel)]="redevable.cin">
+    </div>
+
+
+    <div class="form-group">
+      <label>libelleCat: </label>
+      <input type="text" class="form-control" [(ngModel)]="catgorie.libelle">
+    </div>
+
+    <div class="form-group">
+      <label>derniereAnneePaye: </label>
+      <input type="text" class="form-control" [(ngModel)]="local.derniereAnneePaye">
+    </div>
+
+    <div class="form-group">
+      <label>dernierTrimestrePaye : </label>
+      <input type="text" class="form-control" [(ngModel)]="local.dernierTrimestrePaye">
+    </div>
+    <div class="form-group">
+      <label>libelleRue : </label>
+      <input type="text" class="form-control" [(ngModel)]="rue.libelle">
+    </div>
+
+  </div>
+
+  <div class="card-footer">
+    <button class="btn btn-outline-dark btn-block" (click)="save()">Save</button>
+  </div>
+</div>
+
