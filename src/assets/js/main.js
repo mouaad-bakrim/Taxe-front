@@ -260,4 +260,3 @@ $('.login-reg-panel input[type="radio"]').on('change', function() {
     $('.register-show').removeClass('show-log-panel');
   }
 });
-

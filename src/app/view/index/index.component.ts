@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {OrderDetailsService} from "../../service/order-details.service";
 
 
 @Component({
@@ -7,8 +8,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  constructor() {
 
-
+  }
   ngOnInit(): void {
+
   }
-  }
+
+}
