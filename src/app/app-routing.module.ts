@@ -10,6 +10,9 @@ import {LocalCreateComponent} from "./view/local/local-create/local-create.compo
 import {
   TaxeTrimestrielCeateComponent
 } from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
+import {
+  NotificationLocalCreateComponent
+} from "./view/notification-local/notification-local-create/notification-local-create.component";
 
 export let indexLink='index';
 export let taxeLink='taxe';
@@ -24,7 +27,8 @@ const routes: Routes = [
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
   {path:taxeLink,component:TaxeTrimestrielCeateComponent},
-  {path:'local-create',component:LocalCreateComponent}
+  {path:'local-create',component:LocalCreateComponent},
+  {path:'notification-local-create',component:NotificationLocalCreateComponent}
 ];
 
 @NgModule({
