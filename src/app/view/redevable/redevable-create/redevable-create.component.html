@@ -1,4 +1,6 @@
-<h2> Sign in/up Form</h2>
+<section id="hero">
+  <img src="assets/img/hero-bg.jpg" alt="">
+  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
 <div class="container" id="container">
   <div class="form-container sign-up-container">
     <form action="#">
@@ -9,7 +11,7 @@
         <a href="#" class="social bg-secondary"><i class="bi bi-linkedin"></i></a>
       </div>
       <span>or use your email for registration</span>
-      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" />
+      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" name="nom"/>
       <input type="text" placeholder="prenom"  [(ngModel)]="redevable.prenom"/>
       <input type="text" placeholder="cin"  [(ngModel)]="redevable.cin"/>
       <button (click)="save()">Save</button>
@@ -26,10 +28,10 @@
       <span>or use your account</span>
 
 
-      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" />
-      <input type="text" placeholder="cin"  [(ngModel)]="redevable.cin"/>
+      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" name="nom" />
+      <input type="text" placeholder="cin"  [(ngModel)]="redevable.cin" name="cin"/>
       <a href="#">Forgot your password?</a>
-      <button (click)="save()">Save</button>
+      <button (click)="save()" routerLink="index" routerLinkActive="active-link">Save</button>
     </form>
   </div>
   <div class="overlay-container">
@@ -47,6 +49,7 @@
     </div>
   </div>
 </div>
-
+  </div>
+</section>
 
 

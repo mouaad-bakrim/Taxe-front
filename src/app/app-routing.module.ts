@@ -8,13 +8,14 @@ import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 
-export let indexLink='';
+export let indexLink='index';
+export let redevableLink='';
 export let homeLink='home';
 
 const routes: Routes = [
   {path:indexLink,component:IndexComponent},
   {path:homeLink,component:HomeComponent},
-  {path:'redevable-create',component:RedevableCreateComponent},
+  {path:redevableLink,component:RedevableCreateComponent},
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
