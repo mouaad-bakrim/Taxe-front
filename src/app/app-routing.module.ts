@@ -7,10 +7,14 @@ import {RedevableCreateComponent} from "./view/redevable/redevable-create/redeva
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
+import {
+  TaxeTrimestrielCeateComponent
+} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
 
 export let indexLink='index';
-export let redevableLink='';
-export let homeLink='home';
+export let taxeLink='taxe';
+export let homeLink='';
+export let redevableLink='redevable';
 
 const routes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -19,6 +23,7 @@ const routes: Routes = [
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
+  {path:taxeLink,component:TaxeTrimestrielCeateComponent},
   {path:'local-create',component:LocalCreateComponent}
 ];
 

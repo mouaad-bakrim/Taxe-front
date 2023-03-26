@@ -14,6 +14,9 @@ import {LocalCreateComponent} from "./view/local/local-create/local-create.compo
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
+import {
+  TaxeTrimestrielCeateComponent
+} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
 
 
 const appRoutes: Routes = [
@@ -34,7 +37,8 @@ const appRoutes: Routes = [
     RueCreateComponent,
     RedevableCreateComponent,
     LocalCreateComponent,
-    TaxeAnuelleCreateComponent
+    TaxeAnuelleCreateComponent,
+    TaxeTrimestrielCeateComponent
   ],
   imports: [
     BrowserModule,
