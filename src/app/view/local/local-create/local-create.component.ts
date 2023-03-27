@@ -18,6 +18,7 @@ export class LocalCreateComponent implements OnInit{
   constructor(private localeService: LocalService) { }
 
   ngOnInit(): void {
+
   }
 
 

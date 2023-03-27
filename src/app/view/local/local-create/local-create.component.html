@@ -1,47 +1,58 @@
-<section id="hero">
-  <img src="assets/img/hero-bg.jpg" alt="">
-  <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-<div class="card">
-  <div class="card-header" style="background-color: lightblue">Gestion Locale</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Locals</title>
+</head>
+<body>
 
-  <div class="card-body">
-
-    <div class="form-group">
-      <label>Reference: </label>
-      <input type="text" class="form-control" [(ngModel)]="local.ref">
+<!--Main Content-->
+<div class="mt-5">
+  <h1 class="text-center">List Locales</h1>
+  <div class="container">
+    <!--Add Local Button-->
+    <div class="my-4">
+      <a href=""><button type="button" class="btn btn-primary">Add Local</button></a>
     </div>
+    <table class="table border" >
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Reference</th>
+        <th scope="col">Redevable</th>
+        <th scope="col">Dernier Trimestre Paye</th>
+        <th scope="col">Dernier Annee Paye</th>
+        <th scope="col">Rue</th>
+        <th scope="col">Categorie</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of locals">
+        <td>{{c.id}}</td>
+        <td>{{c.ref}}</td>
+        <td>{{c.redevable.nom}}</td>
+        <td>{{c.dernierTrimestrePaye}}</td>
+        <td>{{c.derniereAnneePaye}}</td>
+        <td>{{c.rue.libelle}}</td>
+        <td>{{c.categorieLocal.libelle}}</td>
 
-    <div class="form-group">
-      <label>cin: </label>
-      <input type="text" class="form-control" [(ngModel)]="redevable.cin">
-    </div>
-
-
-    <div class="form-group">
-      <label>libelleCat: </label>
-      <input type="text" class="form-control" [(ngModel)]="catgorie.libelle">
-    </div>
-
-    <div class="form-group">
-      <label>derniereAnneePaye: </label>
-      <input type="text" class="form-control" [(ngModel)]="local.derniereAnneePaye">
-    </div>
-
-    <div class="form-group">
-      <label>dernierTrimestrePaye : </label>
-      <input type="text" class="form-control" >
-    </div>
-    <div class="form-group">
-      <label>libelleRue : </label>
-      <input type="text" class="form-control" >
-    </div>
-
-  </div>
-
-  <div class="card-footer">
-    <button class="btn btn-outline-dark btn-block" (click)="save()">Save</button>
+        <td>
+          <div class="d-inline mx-2">
+            <button class="btn btn-warning"  type="button">Update</button>
+          </div>
+          <div class="d-inline">
+            <button class="btn btn-danger"  type="button">Delete</button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+</body>
+</html>
 
-  </div>
-</section>
+<router-outlet></router-outlet>
+

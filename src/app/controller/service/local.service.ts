@@ -3,6 +3,7 @@ import {Local} from "../model/local.model";
 import {HttpClient} from "@angular/common/http";
 import {CategorieLocal} from "../model/categorie-local.model";
 import {environment} from "../../environments/environment";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,9 @@ export class LocalService {
   private _local={} as Local;
   private _locals=[] as Array<Local>;
 
-  constructor(private http:HttpClient) { }
+  constructor(private _http:HttpClient) { }
   public save(): void {
-    this.http.post<Local>(environment.url+'local/', this.local).subscribe(data => {
+    this._http.post<Local>(environment.url+'local/', this.local).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
@@ -21,10 +22,21 @@ export class LocalService {
       }
     });
   }
-  public findAll(): void {
-    this.http.get<Array<Local>>(environment.url+'local/').subscribe(
+
+  public update(): void {
+    this._http.post<Local>(environment.url+'local/', this.local).subscribe(data => {
+      if (data != null) {
+        alert('save success');
+      } else {
+        alert('save error::: ref exist');
+      }
+    });
+  }
+  public findAll(): void{
+    this._http.get<Array<Local>>(environment.url+'local/').subscribe(
       data => {
-        this._locals = data;
+        this.locals=data;
+        console.log(this.locals);
       }, error => {
         alert('Error');
       }
@@ -40,6 +52,14 @@ export class LocalService {
 
   set local(value: Local) {
     this._local = value;
+  }
+
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
   }
 
   get locals(): Array<Local> {

@@ -4,5 +4,3 @@ export class CategorieLocal {
   public code!: string;
 }
 
-export class Categorielocale {
-}
