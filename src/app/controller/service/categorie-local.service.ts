@@ -11,9 +11,9 @@ export class CategorieLocalService {
  private _categorie={} as CategorieLocal;
  private _categories=[] as Array<CategorieLocal>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
   public save(): void {
-    this.http.post<CategorieLocal>(environment.url+'categorie/', this.categorie).subscribe(data => {
+    this._http.post<CategorieLocal>(environment.url+'categorie/', this.categorie).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
@@ -22,7 +22,7 @@ export class CategorieLocalService {
     });
   }
   public findAll(): void {
-    this.http.get<Array<CategorieLocal>>(environment.url+'categorie/').subscribe(
+    this._http.get<Array<CategorieLocal>>(environment.url+'categorie/').subscribe(
       data => {
         this._categories = data;
       }, error => {
@@ -44,6 +44,14 @@ export class CategorieLocalService {
 
   get categories(): Array<CategorieLocal> {
     return this._categories;
+  }
+
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
   }
 
   set categories(value: Array<CategorieLocal>) {
