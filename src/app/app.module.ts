@@ -17,15 +17,17 @@ import {HttpClientModule} from "@angular/common/http";
 import {
   TaxeTrimestrielCeateComponent
 } from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
+import {LocalListComponent} from "./view/local/local-list/local-list.component";
 
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
   {path:homeLink,component:HomeComponent},
-  {path:'redevable-create',component:RedevableCreateComponent},
+  {path:'redevable-list',component:RedevableCreateComponent},
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
+  {path:'local-list',component:LocalListComponent},
   {path:'local-create',component:LocalCreateComponent}
 ];
 @NgModule({
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     RueCreateComponent,
     RedevableCreateComponent,
+    LocalListComponent,
     LocalCreateComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent
