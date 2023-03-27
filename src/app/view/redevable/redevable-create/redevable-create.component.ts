@@ -10,6 +10,7 @@ import {OrderDetailsService} from "../../../service/order-details.service";
   styleUrls: ['./redevable-create.component.css']
 })
 export class RedevableCreateComponent implements OnInit{
+  employeeRecords: any;
 
   constructor(private _redevabelservice:RedevableService ,private service:OrderDetailsService) {
     let js: HTMLScriptElement = document.createElement("script");

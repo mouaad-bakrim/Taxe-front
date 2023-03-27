@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Redevable} from "../model/redevable.model";
 import {HttpClient} from "@angular/common/http";
-import {NotificationLocal} from "../model/notification-local.model";
 import {environment} from "../../environments/environment";
-import {Quartier} from "../model/quartier.model";
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +47,15 @@ export class RedevableService {
 
   set redevables(value: Array<Redevable>) {
     this._redevables = value;
+  }
+  get redevablesList(): Array<Redevable> {
+    if (this.redevablesList == null){
+      this.redevablesList = new Array<Redevable>();
+    }
+    return this.redevablesList;
+  }
+
+  set redevablesList(value: Array<Redevable>) {
+    this.redevablesList = value;
   }
 }

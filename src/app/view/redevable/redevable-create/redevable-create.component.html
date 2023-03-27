@@ -1,55 +1,38 @@
 <section id="hero">
   <img src="assets/img/hero-bg.jpg" alt="">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-<div class="container" id="container">
-  <div class="form-container sign-up-container">
-    <form action="#">
-      <h1>Create Account</h1>
-      <div class="social-container">
-        <a href="#" class="social bg-primary"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social bg-danger"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="social bg-secondary"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <span>or use your email for registration</span>
-      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" name="nom"/>
-      <input type="text" placeholder="prenom"  [(ngModel)]="redevable.prenom"/>
-      <input type="text" placeholder="cin"  [(ngModel)]="redevable.cin"/>
-      <button (click)="save()">Save</button>
-    </form>
-  </div>
-  <div class="form-container sign-in-container">
-    <form action="#">
-      <h1>Sign in</h1>
-      <div class="social-container">
-        <a href="#" class="social bg-primary"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social bg-danger"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="social bg-secondary"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <span>or use your account</span>
+    <h1>Welcome to site</h1>
 
 
-      <input type="text" placeholder="nom" [(ngModel)]="redevable.nom" name="nom" />
-      <input type="text" placeholder="cin"  [(ngModel)]="redevable.cin" name="cin"/>
-      <a href="#">Forgot your password?</a>
-      <button (click)="save()" routerLink="index" routerLinkActive="active-link">Save</button>
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1>Welcome Back!</h1>
-        <p>To keep connected with us please login with your personal info</p>
-        <button class="ghost" id="signIn">Sign In</button>
-      </div>
-      <div class="overlay-panel overlay-right">
-        <h1>Hello, Friend!</h1>
-        <p>Enter your personal details and start journey with us</p>
-        <button class="ghost" id="signUp">Sign Up</button>
-      </div>
+<div class="card">
+  <div class="card-header" style="background-color: lightblue">Gestion Locale</div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label>Nom: </label>
+      <input type="text" class="form-control" [(ngModel)]="redevable.nom">
     </div>
+
+    <div class="form-group">
+      <label>Prenom: </label>
+      <input type="text" class="form-control" [(ngModel)]="redevable.prenom">
+    </div>
+
+    <div class="form-group">
+      <label>Cin: </label>
+      <input type="text" class="form-control" [(ngModel)]="redevable.cin">
+    </div>
+
+
+
+  </div>
+
+  <div class="card-footer">
+    <button class="btn btn-outline-dark btn-block" (click)="save()">Save</button>
   </div>
 </div>
+
+    <app-redevable-list></app-redevable-list>
   </div>
 </section>
-
-
