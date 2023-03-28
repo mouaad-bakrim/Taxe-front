@@ -8,30 +8,23 @@ import {NavbarComponent} from "./shaer/navbar/navbar.component";
 import {RueCreateComponent} from "./view/rue/rue-create/rue-create.component";
 import {RedevableCreateComponent} from "./view/redevable/redevable-create/redevable-create.component";
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule, homeLink, indexLink} from "./app-routing.module";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
-import {
-  TaxeTrimestrielCeateComponent
-} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
+import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
 import {LocalListComponent} from "./view/local/local-list/local-list.component";
-import {
-  NotificationLocalCreateComponent
-} from "./view/notification-local/notification-local-create/notification-local-create.component";
-
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
   {path:homeLink,component:HomeComponent},
-  {path:'redevable-list',component:RedevableCreateComponent},
+  {path:'redevable-create',component:RedevableCreateComponent},
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
-  {path:'local-list',component:LocalListComponent},
-  {path:'local-create',component:LocalCreateComponent}
+  {path:'local-list',component:LocalListComponent}
 ];
 @NgModule({
   declarations: [
@@ -41,11 +34,11 @@ const appRoutes: Routes = [
     NavbarComponent,
     RueCreateComponent,
     RedevableCreateComponent,
-    LocalListComponent,
     LocalCreateComponent,
+    LocalListComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
-    NotificationLocalCreateComponent
+    RedevableListComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +46,8 @@ const appRoutes: Routes = [
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
