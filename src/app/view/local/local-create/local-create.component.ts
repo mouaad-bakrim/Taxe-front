@@ -11,9 +11,9 @@ import {Rue} from "../../../controller/model/rue.model";
   styleUrls: ['./local-create.component.css']
 })
 export class LocalCreateComponent implements OnInit{
-  private _redevable = new Redevable();
-  private _catgorie= new CategorieLocal();
-  private _rue= new Rue();
+   _redevable1 = new Redevable();
+   _catgorie1= new CategorieLocal();
+  _rue1= new Rue();
 
   constructor(private localeService: LocalService) { }
 
@@ -22,9 +22,22 @@ export class LocalCreateComponent implements OnInit{
   }
 
 
-  public save() {
-    this.localeService.save();
+  public save() :void{
+    this.local.categorieLocal=this._catgorie1;
+    this.local.rue=this._rue1;
+    this.local.redevable=this._redevable1;
+    this.localeService.save().subscribe(
+      data=>{
+        if(data ==null){
+          alert('error')
+        }else{
+          alert('success')
+        }
+      }
+    );
   }
+
+
   get local(): Local{
 
     return this.localeService.local;
@@ -44,26 +57,26 @@ export class LocalCreateComponent implements OnInit{
 
 
   get redevable(): Redevable {
-    return this._redevable;
+    return this._redevable1;
   }
 
   set redevable(value: Redevable) {
-    this._redevable = value;
+    this._redevable1 = value;
   }
 
   get catgorie(): CategorieLocal {
-    return this._catgorie;
+    return this._catgorie1;
   }
 
   set catgorie(value: CategorieLocal) {
-    this._catgorie = value;
+    this._catgorie1 = value;
   }
 
   get rue(): Rue {
-    return this._rue;
+    return this._rue1;
   }
 
   set rue(value: Rue) {
-    this._rue = value;
+    this._rue1 = value;
   }
 }
