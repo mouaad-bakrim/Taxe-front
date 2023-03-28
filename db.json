@@ -1,0 +1,16 @@
+{
+  "redevable": [
+    {
+      "id": 1,
+      "nom": "mouad",
+      "prenom": "bakrim",
+      "cin": "jfs21"
+    },
+    {
+      "id": 2,
+      "nom": "ouad",
+      "prenom": "barim",
+      "cin": "fs21"
+    }
+  ]
+}
