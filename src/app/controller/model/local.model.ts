@@ -14,10 +14,6 @@ export class Local {
 
   public redevable =new Redevable();
   public rue = new Rue();
-  public categorieLocal: CategorieLocal;
+  public categorieLocal = new CategorieLocal();
 
-
-  constructor() {
-    this.categorieLocal = {} as CategorieLocal;
-  }
 }
