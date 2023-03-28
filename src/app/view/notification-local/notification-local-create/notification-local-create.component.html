@@ -1,0 +1,43 @@
+
+<div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new Redevable</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form  >
+          <div class="mb-3">
+            <label  class="form-label">ID </label>
+            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.numero">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Reference </label>
+            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.trimestre">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">CIN </label>
+            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.annee">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">DAP </label>
+            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="redevable1.id">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">DTP </label>
+            <input type="text" formControlName="prenom" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="local1.id">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Notification</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
