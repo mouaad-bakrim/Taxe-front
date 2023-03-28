@@ -8,5 +8,6 @@ export class NotificationLocal {
   public trimestre!:number;
   public local=new Local();
   public redevable =new Redevable();
+  public  mantantEstimation!:number;
 
 }
