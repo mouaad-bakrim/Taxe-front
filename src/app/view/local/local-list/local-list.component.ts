@@ -43,7 +43,9 @@ public findAll():void{
     this._localeService.locals= value;
   }
 
-
+  public save() {
+    this.localeService.save();
+  }
   get redevable(): Redevable {
     return this._redevable;
   }
