@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     LocalListComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
-    RedevableListComponent,
+    RedevableListComponent
   ],
   imports: [
     BrowserModule,
