@@ -8,16 +8,10 @@ import {Redevable} from "../../../controller/model/redevable.model";
   styleUrls: ['./redevable-list.component.css']
 })
 export class RedevableListComponent implements OnInit{
-  constructor(private redevableService: RedevableService) {
+  constructor() {
   }
   ngOnInit(): void {
-    this.redevableService.findAll();
   }
-
-  get redevablesList(): Array<Redevable>{
-    return this.redevableService.redevablesList;
-  }
-
 
 
 

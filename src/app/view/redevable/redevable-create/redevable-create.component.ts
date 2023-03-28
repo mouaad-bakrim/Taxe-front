@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RedevableService} from "src/app/controller/service/redevable.service";
 import {Redevable} from "src/app/controller/model/redevable.model";
-import {OrderDetailsService} from "../../../service/order-details.service";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -10,39 +10,35 @@ import {OrderDetailsService} from "../../../service/order-details.service";
   styleUrls: ['./redevable-create.component.css']
 })
 export class RedevableCreateComponent implements OnInit{
-  employeeRecords: any;
 
-  constructor(private _redevabelservice:RedevableService ,private service:OrderDetailsService) {
-    let js: HTMLScriptElement = document.createElement("script");
-    js.src='assets/js/scripte.js';
-    document.body.appendChild(js);
+
+
+
+  constructor( private _redevableService : RedevableService) { }
+  ngOnInit():void {
+    this._redevableService.findAll();
   }
-  ngOnInit(): void {
-    console.log(history.state.exemple);
+  public findAll():void{
+    this._redevableService.findAll();
   }
 
   public save(): void {
-    this._redevabelservice.save();
+    this._redevableService.save()
   }
-
-
   get redevable(): Redevable {
-
-    return this._redevabelservice.redevable;
+    return this._redevableService.redevable;
   }
 
   set redevable(value: Redevable) {
-    this._redevabelservice.redevable = value;
+    this._redevableService.redevable =value;
   }
 
   get redevables(): Array<Redevable> {
-    return this._redevabelservice.redevables;
+    return this._redevableService.redevables;
   }
 
   set redevables(value: Array<Redevable>) {
-    this._redevabelservice.redevables = value;
+    this._redevableService.redevables=value;
   }
-
-
 
 }

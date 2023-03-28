@@ -1,38 +1,120 @@
 <section id="hero">
   <img src="assets/img/hero-bg.jpg" alt="">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-    <h1>Welcome to site</h1>
+<div class="container-fluid">
 
-
-<div class="card">
-  <div class="card-header" style="background-color: lightblue">Gestion Locale</div>
-
-  <div class="card-body">
-
-    <div class="form-group">
-      <label>Nom: </label>
-      <input type="text" class="form-control" [(ngModel)]="redevable.nom">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Redevable</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Redevable</button>
+      </div>
     </div>
+  </nav>
 
-    <div class="form-group">
-      <label>Prenom: </label>
-      <input type="text" class="form-control" [(ngModel)]="redevable.prenom">
+
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Redevable ID</th>
+      <th scope="col">nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Cin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of redevables">
+      <td>{{employee.id}}</td>
+      <td>{{employee.nom}}</td>
+      <td>{{employee.prenom}}</td>
+      <td>{{employee.cin}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" >Edit</button>
+        <button type="button" class="btn btn-outline-danger" >Delete</button>
+      </td>
+
+    </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- Add redevable modal -->
+  <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new Redevable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="mb-3">
+              <label  class="form-label">Nom </label>
+              <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Prenom </label>
+              <input type="text" formControlName="prenom" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Cin </label>
+              <input type="text" formControlName="cin" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add redevable</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
     </div>
-
-    <div class="form-group">
-      <label>Cin: </label>
-      <input type="text" class="form-control" [(ngModel)]="redevable.cin">
-    </div>
-
-
-
   </div>
 
-  <div class="card-footer">
-    <button class="btn btn-outline-dark btn-block" (click)="save()">Save</button>
+
+  <!-- Edit employee modal -->
+  <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit redevable details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Nom </label>
+              <input type="text" formControlName="nom" class="form-control" id="nom" aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Prenom </label>
+              <input type="text" formControlName="prenom" class="form-control" id="prenom" aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Cin </label>
+              <input type="text" formControlName="cin" class="form-control" id="cin" aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Update </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
   </div>
+
+
 </div>
 
-    <app-redevable-list></app-redevable-list>
   </div>
 </section>
