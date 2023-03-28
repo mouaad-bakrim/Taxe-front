@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import {NotificationLocal} from "../model/notification-local.model";
 import {HttpClient} from "@angular/common/http";
-import {Local} from "../model/local.model";
 import {environment} from "../../environments/environment";
-import {CategorieLocal} from "../model/categorie-local.model";
 
 @Injectable({
   providedIn: 'root'

@@ -10,8 +10,8 @@ import {NotificationLocal} from "../../../controller/model/notification-local.mo
   styleUrls: ['./notification-local-create.component.css']
 })
 export class NotificationLocalCreateComponent  implements OnInit{
-  public _local1=new Local();
-  public _redevable =new Redevable();
+  public local1=new Local();
+  public redevable =new Redevable();
 
 
 
@@ -22,8 +22,8 @@ export class NotificationLocalCreateComponent  implements OnInit{
   ngOnInit(): void {
   }
   public save(): void {
-    this.notification.local=this._local1;
-    this.notification.redevable=this._redevable;
+    this.notification.local=this.local1;
+    this.notification.redevable=this.redevable;
     this.notificationService.save();
   }
   get notification(): NotificationLocal {
@@ -42,21 +42,5 @@ export class NotificationLocalCreateComponent  implements OnInit{
     this.notificationService.notifications = value;
   }
 
-
-  get local(): Local {
-    return this._local1;
-  }
-
-  set local(value: Local) {
-    this._local1 = value;
-  }
-
-  get redevable(): Redevable {
-    return this._redevable;
-  }
-
-  set redevable(value: Redevable) {
-    this._redevable = value;
-  }
 
 }
