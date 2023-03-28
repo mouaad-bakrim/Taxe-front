@@ -12,8 +12,9 @@ import {Rue} from "../../../controller/model/rue.model";
 })
 export class LocalListComponent implements OnInit{
   private _redevable = new Redevable();
-  private _catgorieLocal= new CategorieLocal();
+
   private _rue= new Rue();
+  private _catgorieLocal= new CategorieLocal();
 
   constructor(private _localeService: LocalService) { }
 
