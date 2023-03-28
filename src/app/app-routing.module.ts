@@ -16,7 +16,6 @@ import {
 import {LocalListComponent} from "./view/local/local-list/local-list.component";
 
 export let indexLink='index';
-export let taxeLink='taxe';
 export let homeLink='';
 export let redevableLink='redevable';
 
@@ -27,7 +26,7 @@ const routes: Routes = [
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
-  {path:taxeLink,component:TaxeTrimestrielCeateComponent},
+  {path:'taxe-trimestriel-create',component:TaxeTrimestrielCeateComponent},
   {path:'local-create',component:LocalCreateComponent},
   {path:'local-list',component:LocalListComponent},
   {path:'notification-local-create',component:NotificationLocalCreateComponent}
