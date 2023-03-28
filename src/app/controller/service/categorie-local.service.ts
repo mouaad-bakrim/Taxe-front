@@ -13,7 +13,8 @@ export class CategorieLocalService {
 
   constructor(private _http: HttpClient) { }
   public save(): void {
-    this._http.post<CategorieLocal>(environment.url+'categorie/', this.categorie).subscribe(data => {
+    this._http.post<CategorieLocal>(
+      environment.url+'categorie/', this.categorie).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
@@ -46,13 +47,7 @@ export class CategorieLocalService {
     return this._categories;
   }
 
-  get http(): HttpClient {
-    return this._http;
-  }
 
-  set http(value: HttpClient) {
-    this._http = value;
-  }
 
   set categories(value: Array<CategorieLocal>) {
     this._categories = value;
