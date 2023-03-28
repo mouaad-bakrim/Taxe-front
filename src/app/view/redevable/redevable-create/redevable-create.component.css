@@ -295,9 +295,6 @@ h6 {
   text-align: center;
 }
 
-
-
-
 #hero .btn-get-started {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -320,4 +317,10 @@ h6 {
 section {
   overflow: hidden;
 }
+
+.card-header{
+  background-color: lightblue;
+  font-size: 18.0pt;
+}
+
 
