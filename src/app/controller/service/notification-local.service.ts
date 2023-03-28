@@ -14,10 +14,13 @@ export class NotificationLocalService {
 
   constructor(private http: HttpClient) { }
   public save(): void {
+    console.log(this._notification)
     this.http.post<NotificationLocal>(environment.url+'notification-local/', this.notification).subscribe(data => {
       if (data != null) {
+        console.log(data)
         alert('save success');
       } else {
+        console.log(data)
         alert('save error::: ref exist');
       }
     });
