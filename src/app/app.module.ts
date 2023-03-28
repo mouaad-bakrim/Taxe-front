@@ -16,6 +16,12 @@ import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-creat
 import {HttpClientModule} from "@angular/common/http";
 import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
 import {LocalListComponent} from "./view/local/local-list/local-list.component";
+import {
+  NotificationLocalCreateComponent
+} from "./view/notification-local/notification-local-create/notification-local-create.component";
+import {
+  NotificationLocalListComponent
+} from "./view/notification-local/notification-local-list/notification-local-list.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -38,7 +44,9 @@ const appRoutes: Routes = [
     LocalListComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
-    RedevableListComponent
+    RedevableListComponent,
+    NotificationLocalCreateComponent,
+    NotificationLocalListComponent
   ],
   imports: [
     BrowserModule,
