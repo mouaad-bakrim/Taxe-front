@@ -1,1 +1,39 @@
-<p>taux-taxe-trimestriel-create works!</p>
+<h1 class="m-4 text-danger">Create TauxTaxeTrimestriel</h1>
+<div class="card">
+  <div class="card-footer">Create TauxTaxeTrimestriel {{tauxTaxeTrimestriel|json}}</div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="pourcentageRetard">Reference</label>
+      <input id="pourcentageRetard" type="text" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard " class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="pourcentageMajoration">Total</label>
+      <input id="pourcentageMajoration" type="number" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="montantParNuite">Total Payee</label>
+      <input id="montantParNuite" type="number" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dateApplicationFin">Total Payee</label>
+      <input id="dateApplicationFin" type="number" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="date">Total Payee</label>
+      <input id="date" type="number" [(ngModel)]="tauxTaxeTrimestriel.date" class="form-control">
+    </div>
+
+
+  </div>
+
+
+  <div class="card-footer">
+    <button class="btn btn-danger btn-lg" (click)="save()"> Save</button>
+  </div>
+
+
+</div>

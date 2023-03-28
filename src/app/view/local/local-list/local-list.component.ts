@@ -11,14 +11,18 @@ import {Rue} from "../../../controller/model/rue.model";
   styleUrls: ['./local-list.component.css']
 })
 export class LocalListComponent implements OnInit{
-  private _redevable = new Redevable();
-  private _catgorieLocal= new CategorieLocal();
-  private _rue= new Rue();
+  private _redevable1 = new Redevable();
+
+  private _rue1= new Rue();
+  private _catgorieLocal1= new CategorieLocal();
 
   constructor(private _localeService: LocalService) { }
 
   ngOnInit(): void {
     this._localeService.findAll();
+  }
+  public save(): void {
+    this.localeService.save();
   }
 
 public findAll():void{
@@ -43,21 +47,22 @@ public findAll():void{
   }
 
 
+
   get redevable(): Redevable {
-    return this._redevable;
+    return this._redevable1;
   }
 
   set redevable(value: Redevable) {
-    this._redevable = value;
+    this._redevable1 = value;
   }
 
 
   get catgorieLocal(): CategorieLocal {
-    return this._catgorieLocal;
+    return this._catgorieLocal1;
   }
 
   set catgorieLocal(value: CategorieLocal) {
-    this._catgorieLocal = value;
+    this._catgorieLocal1 = value;
   }
 
   get localeService(): LocalService {
@@ -69,10 +74,10 @@ public findAll():void{
   }
 
   get rue(): Rue {
-    return this._rue;
+    return this._rue1;
   }
 
   set rue(value: Rue) {
-    this._rue = value;
+    this._rue1 = value;
   }
 }

@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Locals</title>
-</head>
-<body>
 
 <!--Main Content-->
 <div class="mt-5">
@@ -14,7 +5,7 @@
   <div class="container">
     <!--Add Local Button-->
     <div class="my-4">
-      <a href="local-list.component.html"><button type="button" class="btn btn-primary">Add Local</button></a>
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Local</button>
     </div>
     <table class="table border" >
       <thead>
@@ -36,16 +27,59 @@
         <td>{{c.dernierTrimestrePaye}}</td>
         <td>{{c.derniereAnneePaye}}</td>
         <td>{{c.rue.libelle}}</td>
-        <td>{{c.categorieLocal.libelle}}</td>
+       <td>{{c.categorieLocal.libelle}}</td>
 
-        <td><div class="circle-btn"><button type="button" class=" fa fa-trash btn btn-danger" ></button></div></td>
-        <td><div class="circle-btn"><button type="button" class=" fa fa-edit btn btn-warning" ></button></div></td>
+        <td>
+          <button type="button" class=" fa fa-trash btn  btn-outline-danger" ></button>
+        <button type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
+        </td>
       </tr>
       </tbody>
     </table>
+
+<app-local-create></app-local-create>
+
+
+
+    <!-- Edit employee modal -->
+    <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit redevable details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nom </label>
+                <input type="text" formControlName="nom" class="form-control" id="nom" aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Prenom </label>
+                <input type="text" formControlName="prenom" class="form-control" id="prenom" aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Cin </label>
+                <input type="text" formControlName="cin" class="form-control" id="cin" aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Update </button>
+              </div>
+            </form>
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+  </div>
   </div>
 </div>
-</body>
-</html>
+
 
 
