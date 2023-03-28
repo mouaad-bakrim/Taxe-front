@@ -7,6 +7,8 @@ export class TauxTaxeTrimestriel {
   public pourcentageMajoration!: number;
   public montantParNuite!:number;
   public dateApplicationFin!:Date;
+  public dateApplicationDebut!:Date;
+
   public date!:Date;
 
   public categorielocale = new CategorieLocal();
