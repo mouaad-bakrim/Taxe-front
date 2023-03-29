@@ -17,14 +17,14 @@ export class RedevableService {
   public save(): void {
     this.http.post<Redevable>(environment.url + 'redevable/', this.redevable).subscribe(data => {
       if (data != null) {
-        alert('save success');
+        alert('save VHCC');
       } else {
         alert('save error::: ref exist');
       }
     });
   }
   public deleteByCin(cin: string): Observable<number> {
-      return this.http.delete<number>(environment.url + "cin/" + cin);
+      return this.http.delete<number>(environment.url + 'redevable/cin/' + cin);
     }
   public findAll(): void {
     this.http.get<Array<Redevable>>(environment.url+'redevable/').subscribe(data => {
