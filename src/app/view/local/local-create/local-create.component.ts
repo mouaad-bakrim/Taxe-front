@@ -22,21 +22,9 @@ export class LocalCreateComponent implements OnInit{
   }
 
 
-  public save() :void{
-    this.local.categorieLocal=this._catgorie1;
-    this.local.rue=this._rue1;
-    this.local.redevable=this._redevable1;
-    this.localeService.save().subscribe(
-      data=>{
-        if(data ==null){
-          alert('error')
-        }else{
-          alert('success')
-        }
-      }
-    );
+  public save(): void {
+    this.localeService.save()
   }
-
 
   get local(): Local{
 

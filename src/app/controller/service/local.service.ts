@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {CategorieLocal} from "../model/categorie-local.model";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
+import {Redevable} from "../model/redevable.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,14 @@ export class LocalService {
   private _locals=[] as Array<Local>;
 
   constructor(private _http:HttpClient) { }
-  public save(): Observable<Local>{
-    return this._http.post<Local>(environment.url+'local/', this.local);
+  public save(): void {
+    this.http.post<Local>(environment.url + 'local/', this.local).subscribe(data => {
+      if (data != null) {
+        alert('save success');
+      } else {
+        alert('save error::: ref exist');
+      }
+    });
   }
 
   public update(): void {
