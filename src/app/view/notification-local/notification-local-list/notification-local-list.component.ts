@@ -23,7 +23,6 @@ export class NotificationLocalListComponent{
   }
 
   public deleteById(notification:NotificationLocal,  index: number): void {
-    this.notification=notification;
     this.notificationLocalService.deleteById(notification.id).subscribe(data => {
       if (data>0){
         this.notifications.splice(index,1);
