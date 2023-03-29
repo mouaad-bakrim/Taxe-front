@@ -6,7 +6,6 @@ import {IndexComponent} from "./view/index/index.component";
 import {RedevableCreateComponent} from "./view/redevable/redevable-create/redevable-create.component";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
-import {TauxTaxeAnuelleListComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-list/taux-taxe-anuelle-list.component";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 import {
   TauxTaxeAnuelleCreateComponent

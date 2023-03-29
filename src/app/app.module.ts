@@ -13,7 +13,6 @@ import {AppRoutingModule, homeLink, indexLink} from "./app-routing.module";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TauxTaxeAnuelleCreateComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-create/taux-taxe-anuelle-create.component";
-import {TauxTaxeAnuelleListComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-list/taux-taxe-anuelle-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
 import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
@@ -27,6 +26,9 @@ import {
   TauxTaxeTrimestrielCreateComponent
 } from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-create/taux-taxe-trimestriel-create.component";
 import {RedevableEditComponent} from "./view/redevable/redevable-edit/redevable-edit.component";
+import {
+  TauxTaxeTrimestriellistComponent
+} from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-list/taux-taxe-trimestriel-list.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -49,7 +51,6 @@ const appRoutes: Routes = [
     LocalCreateComponent,
     LocalListComponent,
     TauxTaxeAnuelleCreateComponent,
-    TauxTaxeAnuelleListComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     NotificationLocalListComponent,
     CategoriesCreateComponent,
     TauxTaxeTrimestrielCreateComponent,
-    RedevableEditComponent
+    RedevableEditComponent,
+    TauxTaxeTrimestriellistComponent
   ],
   imports: [
     BrowserModule,
