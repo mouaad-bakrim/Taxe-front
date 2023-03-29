@@ -7,12 +7,9 @@ import {OrderDetailsService} from "../../service/order-details.service";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  constructor(private service:OrderDetailsService) {
-    let js: HTMLScriptElement = document.createElement("script");
-    js.src='assets/js/main.js';
-    document.body.appendChild(js);
+  constructor() {
+
   }
   ngOnInit(): void {
-    console.log(history.state.exemple);
   }
 }

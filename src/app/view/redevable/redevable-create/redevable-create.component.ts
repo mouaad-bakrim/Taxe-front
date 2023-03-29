@@ -14,31 +14,30 @@ export class RedevableCreateComponent implements OnInit{
 
 
 
-  constructor( private _redevableService : RedevableService) { }
+  constructor( private redevableService : RedevableService) { }
   ngOnInit():void {
-    this._redevableService.findAll();
-  }
-  public findAll():void{
-    this._redevableService.findAll();
+    this.save();
+
   }
 
+
   public save(): void {
-    this._redevableService.save()
+    this.redevableService.save()
   }
   get redevable(): Redevable {
-    return this._redevableService.redevable;
+    return this.redevableService.redevable;
   }
 
   set redevable(value: Redevable) {
-    this._redevableService.redevable =value;
+    this.redevableService.redevable =value;
   }
 
   get redevables(): Array<Redevable> {
-    return this._redevableService.redevables;
+    return this.redevableService.redevables;
   }
 
   set redevables(value: Array<Redevable>) {
-    this._redevableService.redevables=value;
+    this.redevableService.redevables=value;
   }
 
 }

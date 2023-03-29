@@ -3,7 +3,6 @@ import {Redevable} from "../model/redevable.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
-import {Local} from "../model/local.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,22 +10,24 @@ import {Local} from "../model/local.model";
 export class RedevableService {
 
 
-  private _redevable = {} as Redevable;
-  private _redevables = [] as Array<Redevable>;
+  public _redevable = {} as Redevable;
+  public _redevables = [] as Array<Redevable>;
 
-  constructor(private _http: HttpClient) {
 
-  }
   public save(): void {
-    this._http.post<Redevable>(environment.url+'redevable/', this.redevable).subscribe(data => {
+    this.http.post<Redevable>(environment.url + 'redevable/', this.redevable).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
         alert('save error::: ref exist');
       }
     });
-  }public findAll(): void {
-    this._http.get<Array<Redevable>>(environment.url+'redevable/').subscribe(data => {
+  }
+  public deleteByCin(cin: string): Observable<number> {
+      return this.http.delete<number>(environment.url + "cin/" + cin);
+    }
+  public findAll(): void {
+    this.http.get<Array<Redevable>>(environment.url+'redevable/').subscribe(data => {
    this.redevables=data;
     },error => {
       alert('Error');
@@ -35,11 +36,15 @@ export class RedevableService {
   }
 
 
+  constructor(private http: HttpClient) {
+
+  }
+
   get redevable(): Redevable {
     if (this._redevable == null){
       this._redevable == new Redevable();
     }
-    return this._redevable;
+    return <Redevable> this._redevable;
   }
 
   set redevable(value: Redevable) {
