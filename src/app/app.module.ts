@@ -22,6 +22,7 @@ import {
 import {
   TauxTaxeTrimestrielCreateComponent
 } from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-create/taux-taxe-trimestriel-create.component";
+import { TauxTaxeTremestrielEditComponent } from './view/taux-taxe-trimestriel/taux-taxe-tremestriel-edit/taux-taxe-tremestriel-edit.component';
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,
     TauxTaxeTrimestriellistComponent,
-    TauxTaxeTrimestrielCreateComponent
+    TauxTaxeTrimestrielCreateComponent,
+    TauxTaxeTremestrielEditComponent
   ],
   imports: [
     BrowserModule,
