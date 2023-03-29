@@ -14,7 +14,7 @@ export class NotificationLocalService {
   constructor(private _http: HttpClient) {
   }
   public save(): Observable<NotificationLocal> {
-    return this._http.post<NotificationLocal>(environment.url+'notification-local/', this.notification);
+    return this.http.post<NotificationLocal>(environment.url+'notification-local/', this.notification);
   }
   public findAll(): Observable<Array<NotificationLocal>> {
     return this._http.get<Array<NotificationLocal>>(environment.url+'notification-local/');
