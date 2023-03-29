@@ -28,7 +28,7 @@ export class NotificationLocalCreateComponent  implements OnInit{
         if (data == null) {
           alert('failure : error exist')
         }else{
-          this.notifications.push({...this.notification});
+          this.notifications.push({...this .notification});
           this.notificationService.notification=new NotificationLocal();
           alert('success :  saved')
         }
