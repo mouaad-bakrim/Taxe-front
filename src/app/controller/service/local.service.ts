@@ -13,8 +13,14 @@ export class LocalService {
   private _locals=[] as Array<Local>;
 
   constructor(private _http:HttpClient) { }
-  public save(): Observable<Local>{
-    return this._http.post<Local>(environment.url+'local/', this.local);
+  public save(): void {
+    this._http.post<Local>(environment.url+'local/', this.local).subscribe(data => {
+      if (data != null) {
+        alert('save success');
+      } else {
+        alert('save error::: ref exist');
+      }
+    });
   }
 
   public update(): void {

@@ -30,8 +30,7 @@ const appRoutes: Routes = [
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
   {path:'local-list',component:LocalListComponent},
-  {path:'notification-local-list',component:NotificationLocalListComponent},
-  {path:'notification-local-create',component:NotificationLocalCreateComponent},
+  {path:'notification-local-list',component:NotificationLocalListComponent}
 ];
 @NgModule({
   declarations: [
