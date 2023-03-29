@@ -3,6 +3,7 @@ import {TauxTaxeAnuelle} from '../model/taux-taxe-anuelle.model';
 import {HttpClient} from '@angular/common/http';
 import {environment} from "../../environments/environment";
 import {TauxTaxeTrimestriel} from "../model/taux-taxe-trimestriel.model";
+import {Observable} from "rxjs";
 
 
 @Injectable({
@@ -15,7 +16,11 @@ export class TauxtaxeanuelleService {
   constructor(private http: HttpClient) {
   }
 
-  public save(): void {
+  public save(): Observable<TauxTaxeAnuelle>{
+    return  this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle.categorielocale);
+  }
+
+ /* public save(): void {
     this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle).subscribe(data => {
       if (data != null) {
         alert('save success');
@@ -23,7 +28,7 @@ export class TauxtaxeanuelleService {
         alert('save error::: ref exist');
       }
     });
-  }
+  }*/
 
   public findAll(): void {
     this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/').subscribe(
