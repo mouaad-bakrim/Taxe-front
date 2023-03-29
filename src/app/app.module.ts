@@ -29,6 +29,9 @@ import {RedevableEditComponent} from "./view/redevable/redevable-edit/redevable-
 import {
   TauxTaxeTrimestriellistComponent
 } from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-list/taux-taxe-trimestriel-list.component";
+import {
+  TauxTaxeAnuelleListComponent
+} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-list/taux-taxe-anuelle-list.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -59,7 +62,8 @@ const appRoutes: Routes = [
     CategoriesCreateComponent,
     TauxTaxeTrimestrielCreateComponent,
     RedevableEditComponent,
-    TauxTaxeTrimestriellistComponent
+    TauxTaxeTrimestriellistComponent,
+    TauxTaxeAnuelleListComponent
   ],
   imports: [
     BrowserModule,
