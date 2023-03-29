@@ -16,7 +16,6 @@ export class RedevableCreateComponent implements OnInit{
 
   constructor( private redevableService : RedevableService) { }
   ngOnInit():void {
-    this.save();
 
   }
 
@@ -39,5 +38,6 @@ export class RedevableCreateComponent implements OnInit{
   set redevables(value: Array<Redevable>) {
     this.redevableService.redevables=value;
   }
+
 
 }

@@ -16,7 +16,6 @@ export class RedevableListComponent implements OnInit{
   }
 
   public deleteByCin(redevable: Redevable, index: number): void {
-    this.redevable=redevable;
     this.redevableService.deleteByCin(redevable.cin).subscribe(data => {
       if (data > 0) {
         this.redevables.splice(index, 1)
@@ -25,6 +24,9 @@ export class RedevableListComponent implements OnInit{
       }
     });
   }
+ public editRedevable(redevable: Redevable, index: number): void{
+
+ }
   ngOnInit(): void {
     this.findAll();
   }
