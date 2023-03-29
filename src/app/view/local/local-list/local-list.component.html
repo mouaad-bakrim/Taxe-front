@@ -16,18 +16,20 @@
         <th scope="col">Dernier Trimestre Paye</th>
         <th scope="col">Dernier Annee Paye</th>
         <th scope="col">Rue</th>
-        <th scope="col">Categorie</th>
+        <th scope="col">categorie</th>
+
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of locals; index as i">
+      <tr *ngFor="let c of locals">
         <td>{{c.id}}</td>
         <td>{{c.ref}}</td>
         <td>{{c.redevable.nom}}</td>
         <td>{{c.dernierTrimestrePaye}}</td>
         <td>{{c.derniereAnneePaye}}</td>
         <td>{{c.rue.libelle}}</td>
-       <td>{{c.categorieLocal.libelle}}</td>
+        <td>{{c.categorieLocal.libelle}}</td>
+
 
         <td>
           <button type="button" class=" fa fa-trash btn  btn-outline-danger" ></button>
@@ -54,15 +56,15 @@
             <form>
               <div class="mb-3">
                 <label class="form-label">Nom </label>
-                <input type="text" formControlName="nom" class="form-control" id="nom" aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
+                <input type="text" class="form-control" id="nom" aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
               </div>
               <div class="mb-3">
                 <label  class="form-label">Prenom </label>
-                <input type="text" formControlName="prenom" class="form-control" id="prenom" aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
+                <input type="text"  class="form-control" id="prenom" aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
               </div>
               <div class="mb-3">
                 <label  class="form-label">Cin </label>
-                <input type="text" formControlName="cin" class="form-control" id="cin" aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
+                <input type="text"  class="form-control" id="cin" aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
