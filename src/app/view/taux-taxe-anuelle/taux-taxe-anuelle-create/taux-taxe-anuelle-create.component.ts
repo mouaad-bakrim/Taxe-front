@@ -1,9 +1,8 @@
-/*
+
 
 import {Component, OnInit} from "@angular/core";
 import {TauxtaxeanuelleService} from "../../../controller/service/tauxtaxeanuelle.service";
 import {TauxTaxeAnuelle} from "../../../controller/model/taux-taxe-anuelle.model";
-import {TauxtaxetrimestrielService} from "../../../controller/service/tauxtaxetrimestriel.service";
 
 
 
@@ -19,21 +18,19 @@ export class TauxTaxeAnuelleCreateComponent implements OnInit {
 
 
   public save(): void{
-    this.tauxtaxeanuelleService.save() : void{
-      this.tauxtaxeAnuelleService.save(this.tauxTaxeAnuelle).subscribe(
-        data => {
-          if (data == null) {
-            alert('failure : ref exist')
-          }else{
-            //this.tauxtaxetrimestriel = null;
-            alert('success : tauxtaxetrimestriel save')
-          }
+    this.tauxtaxeanuelleService.save().subscribe(
+      data => {
+        if (data == null) {
+          alert('failure : ref exist')
+        }else{
+          //this.tauxtaxetrimestriel = null;
+          alert('success : tauxtaxetrimestriel save')
         }
-      );
-    }
-
-    }
+      }
+    );
   }
+
+
 
   constructor(private tauxtaxeanuelleService: TauxtaxeanuelleService) {
   }

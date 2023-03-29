@@ -12,6 +12,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule, homeLink, indexLink} from "./app-routing.module";
 import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
+import {TauxTaxeAnuelleCreateComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-create/taux-taxe-anuelle-create.component";
+import {TauxTaxeAnuelleListComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-list/taux-taxe-anuelle-list.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
 import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
@@ -46,6 +48,8 @@ const appRoutes: Routes = [
     RedevableCreateComponent,
     LocalCreateComponent,
     LocalListComponent,
+    TauxTaxeAnuelleCreateComponent,
+    TauxTaxeAnuelleListComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,

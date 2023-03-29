@@ -1,87 +1,37 @@
 
-<!--Main Content-->
-<div class="mt-5">
-  <h1 class="text-center">List Locale</h1>
-  <div class="container">
-    <!--Add Local Button-->
-    <div class="my-4">
-      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Local</button>
-    </div>
-    <table class="table border" >
-      <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Reference</th>
-        <th scope="col">Redevable</th>
-        <th scope="col">Dernier Trimestre Paye</th>
-        <th scope="col">Dernier Annee Paye</th>
-        <th scope="col">Rue</th>
-        <th scope="col">categorie</th>
-
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let c of locals">
-        <td>{{c.id}}</td>
-        <td>{{c.ref}}</td>
-        <td>{{c.redevable.nom}}</td>
-        <td>{{c.dernierTrimestrePaye}}</td>
-        <td>{{c.derniereAnneePaye}}</td>
-        <td>{{c.rue.libelle}}</td>
-        <td>{{c.categorieLocal.libelle}}</td>
-
-
-        <td>
-          <button type="button" class=" fa fa-trash btn  btn-outline-danger" ></button>
-        <button type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-<app-local-create></app-local-create>
 
 
 
-    <!-- Edit employee modal -->
-    <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Edit redevable details</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
 
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Nom </label>
-                <input type="text" class="form-control" id="nom" aria-describedby="emailHelp" [(ngModel)]="redevable.nom">
-              </div>
-              <div class="mb-3">
-                <label  class="form-label">Prenom </label>
-                <input type="text"  class="form-control" id="prenom" aria-describedby="emailHelp" [(ngModel)]="redevable.prenom">
-              </div>
-              <div class="mb-3">
-                <label  class="form-label">Cin </label>
-                <input type="text"  class="form-control" id="cin" aria-describedby="emailHelp" [(ngModel)]="redevable.cin">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Update </button>
-              </div>
-            </form>
+        <table class="table border" >
+          <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Reference</th>
+            <th scope="col">Redevable</th>
+            <th scope="col">Dernier Trimestre Paye</th>
+            <th scope="col">Dernier Annee Paye</th>
+            <th scope="col">Rue</th>
+            <th scope="col">categorie</th>
 
+          </tr>
 
+          </thead>
+          <tbody>
 
-          </div>
-        </div>
-      </div>
-
-
-  </div>
-  </div>
-</div>
-
-
+          <tr *ngFor="let c of locals">
+            <td>{{c.id}}</td>
+            <td>{{c.ref}}</td>
+            <td>{{c.redevable.nom}}</td>
+            <td>{{c.dernierTrimestrePaye}}</td>
+            <td>{{c.derniereAnneePaye}}</td>
+            <td>{{c.rue.libelle}}</td>
+            <td>{{c.categorieLocal}}</td>
+            <td>
+              <span  type="button" class=" fa fa-trash btn  btn-outline-danger" ></span>
+              <button  type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
 
