@@ -11,27 +11,27 @@
         <form  >
           <div class="mb-3">
             <label  class="form-label">numero </label>
-            <input type="text" formControlName="numero" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.numero">
+            <input type="text"  class="form-control" name="numero" aria-describedby="emailHelp" [(ngModel)]="notification.numero">
           </div>
           <div class="mb-3">
             <label  class="form-label">trimestre </label>
-            <input type="text" formControlName="trimestre" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.trimestre">
+            <input type="text"  class="form-control"  name="trimestre" aria-describedby="emailHelp" [(ngModel)]="notification.trimestre">
           </div>
           <div class="mb-3">
             <label  class="form-label">Annee </label>
-            <input type="text" formControlName="Annee" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="notification.annee">
+            <input type="text"  class="form-control" name="annee" aria-describedby="emailHelp" [(ngModel)]="notification.annee">
           </div>
           <div class="mb-3">
             <label  class="form-label">Id redevable </label>
-            <input type="text"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="redevable1.id">
+            <input type="text"  class="form-control" name="id" aria-describedby="emailHelp" [(ngModel)]="redevable1.id">
           </div>
           <div class="mb-3">
             <label  class="form-label">Id local </label>
-            <input type="text" formControlName="Id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="local1.id">
+            <input type="text"  class="form-control" name="id"  aria-describedby="emailHelp" [(ngModel)]="local1.id">
           </div>
           <div class="mb-3">
             <label  class="form-label">mantant</label>
-            <input type="text" formControlName="mantant" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="notification.mantantEstimation">
+            <input type="text"  class="form-control" name="mantantEstimation"  aria-describedby="emailHelp" [(ngModel)]="notification.mantantEstimation">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

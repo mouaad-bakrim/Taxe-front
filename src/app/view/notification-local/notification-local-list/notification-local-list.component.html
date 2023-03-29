@@ -5,7 +5,7 @@
       <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Notification</button>
       <app-notification-local-create></app-notification-local-create>
     </div>
-    <table class="table border" >
+    <table class="table border" *ngIf="notifications.length !=0" >
       <thead>
       <tr>
         <th scope="col">ID</th>
@@ -14,18 +14,20 @@
         <th scope="col">annee</th>
         <th scope="col">ref de local</th>
         <th scope="col">cin de redevabl</th>
+        <th scope="col">mantantEstimation</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of notifications">
+      <tr *ngFor="let c of notifications ; index as i">
         <td>{{c.id}}</td>
         <td>{{c.numero}}</td>
         <td>{{c.trimestre}}</td>
         <td>{{c.annee}}</td>
         <td>{{c.local.ref}}</td>
         <td>{{c.redevable.cin}}</td>
+        <td>{{c.mantantEstimation}}</td>
         <td>
-          <button type="button" class=" fa fa-trash btn  btn-outline-danger" ></button>
+          <span class=" fa fa-trash btn  btn-outline-danger" (click)="deleteById(c,i)"></span>
           <button type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
         </td>
       </tr>
