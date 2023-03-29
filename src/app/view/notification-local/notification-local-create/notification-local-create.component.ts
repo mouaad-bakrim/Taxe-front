@@ -20,9 +20,9 @@ export class NotificationLocalCreateComponent  {
   public save() : void{
     this.notification.local=this.local1;
     this.notification.redevable=this.redevable1;
-    console.log(this.notification)
     this.notificationService.save().subscribe(
       data => {
+        console.log(data)
         if (data == null) {
           alert('failure : error exist')
         }else{

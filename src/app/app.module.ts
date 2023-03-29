@@ -19,9 +19,8 @@ import {LocalListComponent} from "./view/local/local-list/local-list.component";
 import {
   NotificationLocalCreateComponent
 } from "./view/notification-local/notification-local-create/notification-local-create.component";
-import {
-  NotificationLocalListComponent
-} from "./view/notification-local/notification-local-list/notification-local-list.component";
+import { NotificationLocalListComponent } from './view/notification-local/notification-local-list/notification-local-list.component';
+import {CategoriesCreateComponent} from "./view/categorie/categorie-create/categories-create.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -30,7 +29,8 @@ const appRoutes: Routes = [
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
-  {path:'local-list',component:LocalListComponent}
+  {path:'local-list',component:LocalListComponent},
+  {path:'notification-local-list',component:NotificationLocalListComponent}
 ];
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ const appRoutes: Routes = [
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,
     NotificationLocalCreateComponent,
-    NotificationLocalListComponent
+    NotificationLocalListComponent,
+    CategoriesCreateComponent
   ],
   imports: [
     BrowserModule,

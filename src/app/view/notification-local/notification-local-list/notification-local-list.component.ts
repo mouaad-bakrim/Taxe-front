@@ -20,10 +20,11 @@ export class NotificationLocalListComponent implements OnInit{
     this._notificationLocalService = value;
   }
 
-  public findAll():void{
-    this._notificationLocalService.findAll().subscribe(
-      data =>{
-        this.notifications = data
+  public findAll():void {
+    this.notificationLocalService.findAll().subscribe(data => {
+        this.notifications= data
+      }, error => {
+        alert('Error');
       }
     );
   }
