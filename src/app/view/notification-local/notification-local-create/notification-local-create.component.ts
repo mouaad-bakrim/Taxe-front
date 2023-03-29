@@ -22,6 +22,7 @@ export class NotificationLocalCreateComponent  implements OnInit{
   public save() : void{
     this.notification.local=this.local1;
     this.notification.redevable=this.redevable1;
+
     this.notificationService.save().subscribe(
       data => {
         console.log(data)
