@@ -56,27 +56,27 @@ export class LocalCreateComponent implements OnInit{
   }
 
 
-  get redevable(): Redevable {
+  get redevable1(): Redevable {
     return this._redevable1;
   }
 
-  set redevable(value: Redevable) {
+  set redevable1(value: Redevable) {
     this._redevable1 = value;
   }
 
-  get catgorie(): CategorieLocal {
+  get catgorie1(): CategorieLocal {
     return this._catgorie1;
   }
 
-  set catgorie(value: CategorieLocal) {
+  set catgorie1(value: CategorieLocal) {
     this._catgorie1 = value;
   }
 
-  get rue(): Rue {
+  get rue1(): Rue {
     return this._rue1;
   }
 
-  set rue(value: Rue) {
+  set rue1(value: Rue) {
     this._rue1 = value;
   }
 }

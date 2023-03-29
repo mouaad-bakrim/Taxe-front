@@ -10,31 +10,31 @@
         <form  >
           <div class="mb-3">
             <label  class="form-label">ID </label>
-            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.id">
+            <input type="text" name="id" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.id">
           </div>
           <div class="mb-3">
             <label  class="form-label">Reference </label>
-            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.ref">
+            <input type="text" name="ref"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.ref">
           </div>
           <div class="mb-3">
             <label  class="form-label">CIN </label>
-            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="_redevable1.cin">
+            <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="redevable1.cin">
           </div>
           <div class="mb-3">
             <label  class="form-label">DAP </label>
-            <input type="text" formControlName="nom" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.derniereAnneePaye">
+            <input type="text" name="derniereAnneePaye" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="local.derniereAnneePaye">
           </div>
           <div class="mb-3">
             <label  class="form-label">DTP </label>
-            <input type="text" formControlName="prenom" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="local.dernierTrimestrePaye">
+            <input type="text" name="dernierTrimestrePaye" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="local.dernierTrimestrePaye">
           </div>
           <div class="mb-3">
             <label class="form-label">Rue </label>
-            <input type="text" formControlName="cin" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="_rue1.libelle">
+            <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="rue1.id">
           </div>
           <div class="mb-3">
             <label class="form-label">Categorie </label>
-            <input type="text" formControlName="cin" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="_catgorie1.libelle">
+            <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="catgorie1.id">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

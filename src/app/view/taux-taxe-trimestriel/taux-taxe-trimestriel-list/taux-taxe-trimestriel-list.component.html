@@ -30,9 +30,13 @@
       <td>{{TauxTaxeTrimestriel.montantParNuite}}</td>
       <td>
         <button class="btn btn-sm btn-info">
-          <i class="fa fa-search"></i>Details</button>
-        <button class="btn btn-sm btn-warning">
-          <i class="fa fa-edit"></i>Edit</button>
+          <i class="fa fa-search"></i>
+          Details
+        </button>
+        <button class="btn btn-sm btn-warning" (click)="edit = true">
+          <i class="fa fa-edit"></i>
+          Edit
+        </button>
         <button class="btn btn-sm btn-danger">
           <i class="fa fa-remove"></i>Delete</button>
       </td>
@@ -41,23 +45,7 @@
   </table>
 </div>
 
+<app-taux-taxe-tremestriel-edit *ngIf="edit"
+></app-taux-taxe-tremestriel-edit>
 
 
-
-
-
-
-<div class="row">
-  <div class="col-sm">
-    Column 1
-  </div>
-  <div class="col-sm">
-    Column 2
-  </div>
-  <div class="col-sm">
-    Column 3
-  </div>
-  <div class="col-sm">
-    Colunm 4
-  </div>
-</div>

@@ -11,13 +11,16 @@ export class NotificationLocalService {
   private _notification = {} as NotificationLocal;
   private _notifications = [] as Array<NotificationLocal>;
 
-  constructor(private _http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
   public save(): Observable<NotificationLocal> {
-    return this._http.post<NotificationLocal>(environment.url+'notification-local/', this.notification);
+    return this.http.post<NotificationLocal>(environment.url+'notification-local/', this.notification);
+  }
+  public deleteById(id: number): Observable<number> {
+    return this.http.delete<number>(environment.url+'notification-local/'+id);
   }
   public findAll(): Observable<Array<NotificationLocal>> {
-    return this._http.get<Array<NotificationLocal>>(environment.url+'notification-local/');
+    return this.http.get<Array<NotificationLocal>>(environment.url+'notification-local/');
   }
 
 
@@ -37,11 +40,4 @@ export class NotificationLocalService {
     this._notifications = value;
   }
 
-  get http(): HttpClient {
-    return this._http;
-  }
-
-  set http(value: HttpClient) {
-    this._http = value;
-  }
 }

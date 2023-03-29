@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NotificationLocalService} from "../../../controller/service/notification-local.service";
 import {NotificationLocal} from "../../../controller/model/notification-local.model";
 import {Local} from "../../../controller/model/local.model";
@@ -9,24 +9,27 @@ import {Redevable} from "../../../controller/model/redevable.model";
   templateUrl: './notification-local-create.component.html',
   styleUrls: ['./notification-local-create.component.css']
 })
-export class NotificationLocalCreateComponent  {
+export class NotificationLocalCreateComponent  implements OnInit{
   private _local1=new Local();
   private _redevable1=new Redevable();
 
+
   constructor(private notificationService:NotificationLocalService) {
   }
-
+  ngOnInit(): void {
+  }
 
   public save() : void{
     this.notification.local=this.local1;
     this.notification.redevable=this.redevable1;
-    console.log(this.notification)
     this.notificationService.save().subscribe(
       data => {
+        console.log(data)
         if (data == null) {
           alert('failure : error exist')
         }else{
-          //this.notificationService.notification = null;
+          this.notifications.push({...this.notification});
+          this.notificationService.notification=new NotificationLocal();
           alert('success :  saved')
         }
       }
@@ -64,4 +67,6 @@ export class NotificationLocalCreateComponent  {
   set redevable1(value: Redevable) {
     this._redevable1 = value;
   }
+
+
 }

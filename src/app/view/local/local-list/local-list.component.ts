@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {LocalService} from "../../../controller/service/local.service";
 import {Local} from "../../../controller/model/local.model";
 import {Redevable} from "../../../controller/model/redevable.model";
@@ -10,7 +10,7 @@ import {Rue} from "../../../controller/model/rue.model";
   templateUrl: './local-list.component.html',
   styleUrls: ['./local-list.component.css']
 })
-export class LocalListComponent implements OnInit{
+export class LocalListComponent {
   private _redevable1 = new Redevable();
 
   private _rue1= new Rue();
@@ -19,14 +19,14 @@ export class LocalListComponent implements OnInit{
   constructor(private _localeService: LocalService) { }
 
   ngOnInit(): void {
-    this._localeService.findAll();
+    this.findAll();
   }
   public save(): void {
     this.localeService.save();
   }
 
 public findAll():void{
-    this._localeService.findAll();
+    this.localeService.findAll();
 }
 
   get local(): Local{
@@ -39,7 +39,7 @@ public findAll():void{
   }
 
   get locals(): Array<Local> {
-    return this._localeService.locals;
+    return this.localeService.locals;
   }
 
   set locals(value: Array<Local>) {
