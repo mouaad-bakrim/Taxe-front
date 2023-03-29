@@ -2,41 +2,26 @@ import { Injectable } from '@angular/core';
 import {NotificationLocal} from "../model/notification-local.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotificationLocalService {
-  private _notification={} as NotificationLocal;
-  private _notifications=[] as Array<NotificationLocal>;
+  private _notification = {} as NotificationLocal;
+  private _notifications = [] as Array<NotificationLocal>;
 
-  constructor(private http: HttpClient) { }
-  public save(): void {
-    console.log(this._notification)
-    this.http.post<NotificationLocal>(environment.url+'notification-local/', this.notification).subscribe(data => {
-      if (data != null) {
-        console.log(data)
-        alert('save success');
-      } else {
-        console.log(data)
-        alert('save error::: ref exist');
-      }
-    });
+  constructor(private _http: HttpClient) {
   }
-  public findAll(): void {
-    this.http.get<Array<NotificationLocal>>(environment.url+'notification-local/').subscribe(
-      data => {
-        this._notifications = data;
-      }, error => {
-        alert('Error');
-      }
-    );
+  public save(): Observable<NotificationLocal> {
+    return this._http.post<NotificationLocal>(environment.url+'notification-local/', this.notification);
   }
+  public findAll(): Observable<Array<NotificationLocal>> {
+    return this._http.get<Array<NotificationLocal>>(environment.url+'notification-local/');
+  }
+
 
   get notification(): NotificationLocal {
-    if (this._notification == null) {
-      this._notification == new NotificationLocal();
-    }
     return this._notification;
   }
 
@@ -50,5 +35,13 @@ export class NotificationLocalService {
 
   set notifications(value: Array<NotificationLocal>) {
     this._notifications = value;
+  }
+
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
   }
 }

@@ -5,19 +5,12 @@ import {Rue} from "./rue.model";
 export class Local {
   public id!: number;
   public ref!: string;
-
-
-
   public derniereAnneePaye!:number;
 
   public dernierTrimestrePaye!:number;
 
   public redevable =new Redevable();
   public rue = new Rue();
-  public categorieLocal: CategorieLocal;
+  public categorieLocal= new CategorieLocal();
 
-
-  constructor() {
-    this.categorieLocal = {} as CategorieLocal;
-  }
 }
