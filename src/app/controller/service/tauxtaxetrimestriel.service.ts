@@ -34,6 +34,9 @@ export class TauxtaxetrimestrielService {
       }
     );
   }*/
+  public update(tauxTaxeTrimestriel: TauxTaxeTrimestriel): Observable<TauxTaxeTrimestriel> {
+    return this.http.post<TauxTaxeTrimestriel>(this._url, tauxTaxeTrimestriel);
+  }
   public save(tauxTaxeTrimestriel: TauxTaxeTrimestriel): Observable<TauxTaxeTrimestriel> {
     return this.http.post<TauxTaxeTrimestriel>(this._url, tauxTaxeTrimestriel);
   }

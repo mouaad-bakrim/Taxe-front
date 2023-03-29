@@ -8,6 +8,7 @@ import {TauxtaxetrimestrielService} from "../../../controller/service/tauxtaxetr
   styleUrls: ['./taux-taxe-trimestriel-list.component.css']
 })
 export class TauxTaxeTrimestriellistComponent implements OnInit{
+  edit =false;
   ngOnInit(): void {
     this.findAll();
   }
@@ -47,5 +48,6 @@ export class TauxTaxeTrimestriellistComponent implements OnInit{
       }
     );
   }*/
+
 }
 

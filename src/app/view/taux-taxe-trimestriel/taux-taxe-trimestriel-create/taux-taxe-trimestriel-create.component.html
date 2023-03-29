@@ -5,25 +5,29 @@
   <div class="card-body">
 
     <div class="form-group">
-      <label for="pourcentageRetard">Reference</label>
+      <label for="id">Id</label>
+      <input id="id" type="text" [(ngModel)]="tauxTaxeTrimestriel.id " class="form-control">
+    </div>
+ <div class="form-group">
+      <label for="pourcentageRetard">PourcentageRetard</label>
       <input id="pourcentageRetard" type="text" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard " class="form-control">
     </div>
 
     <div class="form-group">
-      <label for="pourcentageMajoration">Total</label>
+      <label for="pourcentageMajoration">PourcentageMajoration</label>
       <input id="pourcentageMajoration" type="number" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration" class="form-control">
     </div>
 
     <div class="form-group">
-      <label for="montantParNuite">Total Payee</label>
+      <label for="montantParNuite">MontantParNuite </label>
       <input id="montantParNuite" type="number" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite" class="form-control">
     </div>
     <div class="form-group">
-      <label for="dateApplicationFin">Total Payee</label>
+      <label for="dateApplicationFin">DateApplicationFin</label>
       <input id="dateApplicationFin" type="number" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin" class="form-control">
     </div>
     <div class="form-group">
-      <label for="date">Total Payee</label>
+      <label for="date">date</label>
       <input id="date" type="number" [(ngModel)]="tauxTaxeTrimestriel.date" class="form-control">
     </div>
 
