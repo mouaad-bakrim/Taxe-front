@@ -14,9 +14,6 @@ import {
   NotificationLocalCreateComponent
 } from "./view/notification-local/notification-local-create/notification-local-create.component";
 import {LocalListComponent} from "./view/local/local-list/local-list.component";
-import {
-  NotificationLocalListComponent
-} from "./view/notification-local/notification-local-list/notification-local-list.component";
 
 export let indexLink='index';
 export let taxeLink='taxe';
@@ -34,7 +31,6 @@ const routes: Routes = [
   {path:'local-create',component:LocalCreateComponent},
   {path:'local-list',component:LocalListComponent},
   {path:'notification-local-create',component:NotificationLocalCreateComponent},
-  {path:'notification-local-list',component:NotificationLocalListComponent}
 ];
 
 @NgModule({
