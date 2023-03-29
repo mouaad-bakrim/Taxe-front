@@ -21,6 +21,12 @@ import {
 } from "./view/notification-local/notification-local-create/notification-local-create.component";
 import { NotificationLocalListComponent } from './view/notification-local/notification-local-list/notification-local-list.component';
 import {CategoriesCreateComponent} from "./view/categorie/categorie-create/categories-create.component";
+import {
+  TauxTaxeTrimestriellistComponent
+} from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-list/taux-taxe-trimestriel-list.component";
+import {
+  TauxTaxeTremestrielEditComponent
+} from "./view/taux-taxe-trimestriel/taux-taxe-tremestriel-edit/taux-taxe-tremestriel-edit.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -29,6 +35,7 @@ const appRoutes: Routes = [
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
+  {path:'taux-taxe-trimestriel-list',component:TauxTaxeTrimestriellistComponent},
   {path:'local-list',component:LocalListComponent},
   {path:'notification-local-list',component:NotificationLocalListComponent}
 ];
@@ -47,7 +54,9 @@ const appRoutes: Routes = [
     RedevableListComponent,
     NotificationLocalCreateComponent,
     NotificationLocalListComponent,
-    CategoriesCreateComponent
+    CategoriesCreateComponent,
+    TauxTaxeTrimestriellistComponent,
+    TauxTaxeTremestrielEditComponent
   ],
   imports: [
     BrowserModule,
