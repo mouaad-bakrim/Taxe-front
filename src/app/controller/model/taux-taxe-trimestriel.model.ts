@@ -1,4 +1,4 @@
-import {CategorieLocal} from "./categorie-local.model";
+import {CategorieLocale} from "./categorie-locale.model";
 
 
 export class TauxTaxeTrimestriel {
@@ -11,5 +11,5 @@ export class TauxTaxeTrimestriel {
 
   public date!:Date;
 
-  public categorielocale = new CategorieLocal();
+  public categorielocale = new CategorieLocale();
 }

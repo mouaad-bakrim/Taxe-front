@@ -29,7 +29,7 @@ export class TauxtaxeanuelleService {
       }
     });
   }*/
-
+/*
   public findAll(): void {
     this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/').subscribe(
       data => {
@@ -38,6 +38,11 @@ export class TauxtaxeanuelleService {
         alert('Error');
       }
     );
+  }*/
+
+
+  public findAll(): Observable<Array<TauxTaxeAnuelle>> {
+    return this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/');
   }
 
 

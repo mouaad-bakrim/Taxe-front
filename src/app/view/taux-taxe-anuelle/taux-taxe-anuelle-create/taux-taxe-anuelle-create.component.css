@@ -12,10 +12,10 @@ body {
 }
 
 .containere {
+position: fixed;
 
-
-  top: 0.5em;
-  left: 0;
+  top: 9%;
+  left: .7em;
   width: 100%;
   margin: 0;
 
@@ -176,3 +176,5 @@ button login__submit
   bottom: 0px;
   right: 0px;
   color: #fff;}
+
+

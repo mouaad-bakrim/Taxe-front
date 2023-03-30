@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {TaxeAnuelle} from "../model/taxe-anuelle.model";
 import {HttpClient} from "@angular/common/http";
-import {TauxTaxeTrimestriel} from "../model/taux-taxe-trimestriel.model";
 import {environment} from "../../environments/environment";
 
 @Injectable({
