@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {CategorieLocale} from "../model/categorie-locale.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {Locale} from "../model/locale.model";
+import {Local} from "../model/local.model";
 
 @Injectable({
   providedIn: 'root'

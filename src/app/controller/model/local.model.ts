@@ -2,7 +2,7 @@ import {CategorieLocale} from "./categorie-locale.model";
 import {Redevable} from "./redevable.model";
 import {Rue} from "./rue.model";
 
-export class Locale {
+export class Local {
   public id!: number;
   public ref!: string;
   public derniereAnneePaye!: number;

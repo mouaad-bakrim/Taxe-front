@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {LocaleService} from "../../../controller/service/locale.service";
-import {Locale} from "../../../controller/model/locale.model";
+import {LocalService} from "../../../controller/service/local.service";
+import {Local} from "../../../controller/model/local.model";
 
 
 @Component({
@@ -10,7 +10,7 @@ import {Locale} from "../../../controller/model/locale.model";
 })
 export class LocalListComponent implements OnInit{
 
-  constructor(private localeService: LocaleService) { }
+  constructor(private localeService: LocalService) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -22,26 +22,26 @@ export class LocalListComponent implements OnInit{
 
   public findAll():void {
     this.localeService.findAll().subscribe(data => {
-      this.locales= data;
-      console.log(this.locales);
+      this.locals= data;
+      console.log(this.locals);
 
     });
   }
 
-  get locale(): Locale {
-    return this.localeService._locale;
+  get local(): Local {
+    return this.localeService._local;
   }
 
-  set locale(value: Locale) {
-    this.localeService._locale = value;
+  set local(value: Local) {
+    this.localeService._local = value;
   }
 
-  get locales(): Locale[] {
-    return this.localeService._locales;
+  get locals(): Local[] {
+    return this.localeService._locals;
   }
 
-  set locales(value: Locale[]) {
-    this.localeService._locales = value;
+  set locals(value: Local[]) {
+    this.localeService._locals = value;
   }
 
 }

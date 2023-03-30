@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NotificationLocalService} from "../../../controller/service/notification-local.service";
 import {NotificationLocal} from "../../../controller/model/notification-local.model";
-import {Locale} from "../../../controller/model/locale.model";
+import {Local} from "../../../controller/model/local.model";
 import {Redevable} from "../../../controller/model/redevable.model";
 
 @Component({

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {LocaleService} from "../../../controller/service/locale.service";
-import {Locale} from "../../../controller/model/locale.model";
+import {LocalService} from "../../../controller/service/local.service";
+import {Local} from "../../../controller/model/local.model";
 import {Redevable} from "../../../controller/model/redevable.model";
 import {CategorieLocale} from "../../../controller/model/categorie-locale.model";
 import {Rue} from "../../../controller/model/rue.model";
@@ -15,7 +15,7 @@ export class LocalCreateComponent implements OnInit{
    _catgorieLocale= new CategorieLocale();
   _rue= new Rue();
 
-  constructor(private localeService: LocaleService) { }
+  constructor(private localeService: LocalService) { }
 
   ngOnInit(): void {
 
@@ -26,21 +26,21 @@ export class LocalCreateComponent implements OnInit{
     this.localeService.save()
   }
 
-  get locale(): Locale{
+  get local(): Local{
 
-    return this.localeService.locale;
+    return this.localeService.local;
   }
 
-  set locale(value: Locale) {
-    this.localeService.locale = value;
+  set local(value: Local) {
+    this.localeService.local = value;
   }
 
-  get locales(): Array<Locale> {
-    return this.localeService.locales;
+  get locals(): Array<Local> {
+    return this.localeService.locals;
   }
 
-  set locales(value: Array<Locale>) {
-    this.localeService.locales= value;
+  set locals(value: Array<Local>) {
+    this.localeService.locals= value;
   }
 
 
