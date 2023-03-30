@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {LocalService} from "../../../controller/service/local.service";
-import {Local} from "../../../controller/model/local.model";
+import {LocaleService} from "../../../controller/service/locale.service";
+import {Locale} from "../../../controller/model/locale.model";
 import {Redevable} from "../../../controller/model/redevable.model";
-import {CategorieLocal} from "../../../controller/model/categorie-local.model";
+import {CategorieLocale} from "../../../controller/model/categorie-locale.model";
 import {Rue} from "../../../controller/model/rue.model";
 
 @Component({
@@ -11,11 +11,11 @@ import {Rue} from "../../../controller/model/rue.model";
   styleUrls: ['./local-create.component.css']
 })
 export class LocalCreateComponent implements OnInit{
-   _redevable1 = new Redevable();
-   _catgorie1= new CategorieLocal();
-  _rue1= new Rue();
+   _redevable = new Redevable();
+   _catgorieLocale= new CategorieLocale();
+  _rue= new Rue();
 
-  constructor(private localeService: LocalService) { }
+  constructor(private localeService: LocaleService) { }
 
   ngOnInit(): void {
 
@@ -26,45 +26,45 @@ export class LocalCreateComponent implements OnInit{
     this.localeService.save()
   }
 
-  get local(): Local{
+  get locale(): Locale{
 
-    return this.localeService.local;
+    return this.localeService.locale;
   }
 
-  set local(value: Local) {
-    this.localeService.local = value;
+  set locale(value: Locale) {
+    this.localeService.locale = value;
   }
 
-  get locals(): Array<Local> {
-    return this.localeService.locals;
+  get locales(): Array<Locale> {
+    return this.localeService.locales;
   }
 
-  set locals(value: Array<Local>) {
-    this.localeService.locals= value;
+  set locales(value: Array<Locale>) {
+    this.localeService.locales= value;
   }
 
 
-  get redevable1(): Redevable {
-    return this._redevable1;
+  get redevable(): Redevable {
+    return this._redevable;
   }
 
-  set redevable1(value: Redevable) {
-    this._redevable1 = value;
+  set redevable(value: Redevable) {
+    this._redevable = value;
   }
 
-  get catgorie1(): CategorieLocal {
-    return this._catgorie1;
+  get catgorieLocale(): CategorieLocale {
+    return this._catgorieLocale;
   }
 
-  set catgorie1(value: CategorieLocal) {
-    this._catgorie1 = value;
+  set catgorieLocale(value: CategorieLocale) {
+    this._catgorieLocale = value;
   }
 
-  get rue1(): Rue {
-    return this._rue1;
+  get rue(): Rue {
+    return this._rue;
   }
 
-  set rue1(value: Rue) {
-    this._rue1 = value;
+  set rue(value: Rue) {
+    this._rue = value;
   }
 }

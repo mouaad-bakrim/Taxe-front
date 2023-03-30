@@ -1,4 +1,4 @@
-import {CategorieLocal} from "./categorie-local.model";
+import {CategorieLocale} from "./categorie-locale.model";
 
 
 export class TauxTaxeAnuelle {
@@ -10,5 +10,5 @@ export class TauxTaxeAnuelle {
   public dateApplicationDebut!: Date;
 
 
-  public categorielocale = new CategorieLocal();
+  public categorielocale = new CategorieLocale();
 }

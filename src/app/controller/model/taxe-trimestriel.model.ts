@@ -1,5 +1,5 @@
 import {Redevable} from "./redevable.model";
-import {CategorieLocal} from "./categorie-local.model";
+import {CategorieLocale} from "./categorie-locale.model";
 import {TauxTaxeTrimestriel} from "./taux-taxe-trimestriel.model";
 
 export class TaxeTrimestriel {
@@ -13,7 +13,7 @@ export class TaxeTrimestriel {
 
   public montantTotal!: number;
   public redevable = new Redevable();
-  public categorieLocal = new CategorieLocal();
+  public categorieLocale = new CategorieLocale();
   public tauxTaxeTrimestriel = new TauxTaxeTrimestriel();
 
 }
