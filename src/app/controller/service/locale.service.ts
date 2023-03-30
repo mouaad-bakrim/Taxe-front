@@ -4,13 +4,14 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {Redevable} from "../model/redevable.model";
+import {NotificationLocal} from "../model/notification-local.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocaleService {
-  private _locale = {} as Locale;
-  private _locales = [] as Array<Locale>;
+  public _locale = {} as Locale;
+  public _locales = [] as Array<Locale>;
 
   constructor(private http: HttpClient) {
   }
@@ -37,13 +38,8 @@ export class LocaleService {
     });
   }
 
-  public findAll(): void {
-    this.http.get<Array<Locale>>(environment.url+'local/').subscribe(data => {
-        this.locales=data;
-      },error => {
-        alert('Error');
-      }
-    );
+  public findAll(): Observable<Array<Locale>> {
+    return this.http.get<Array<Locale>>(environment.url+'local/');
   }
 
 
