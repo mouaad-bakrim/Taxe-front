@@ -1,43 +1,62 @@
-<h1 class="m-4 text-danger">Create TauxTaxeTrimestriel</h1>
-<div class="card">
-  <div class="card-footer">Create TauxTaxeTrimestriel {{tauxTaxeTrimestriel|json}}</div>
 
-  <div class="card-body">
-
-    <div class="form-group">
-      <label for="id">Id</label>
-      <input id="id" type="text" [(ngModel)]="tauxTaxeTrimestriel.id " class="form-control">
+<h1 class="text-center">List Locale</h1>
+<div class="container">
+  <!--Add Local Button-->
+  <div class="my-4">
+    <div class="my-4">
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add CategorieLocal</button>
     </div>
- <div class="form-group">
-      <label for="pourcentageRetard">PourcentageRetard</label>
-      <input id="pourcentageRetard" type="text" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard " class="form-control">
-    </div>
-
-    <div class="form-group">
-      <label for="pourcentageMajoration">PourcentageMajoration</label>
-      <input id="pourcentageMajoration" type="number" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration" class="form-control">
-    </div>
-
-    <div class="form-group">
-      <label for="montantParNuite">MontantParNuite </label>
-      <input id="montantParNuite" type="number" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="dateApplicationFin">DateApplicationFin</label>
-      <input id="dateApplicationFin" type="number" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="date">date</label>
-      <input id="date" type="number" [(ngModel)]="tauxTaxeTrimestriel.date" class="form-control">
-    </div>
-
-
   </div>
 
+  <app-taux-taxe-trimestriel-list></app-taux-taxe-trimestriel-list>
+  <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new Redevable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
 
-  <div class="card-footer">
-    <button class="btn btn-danger btn-lg" (click)="save()"> Save</button>
+          <form  >
+            <div class="mb-3">
+              <label  class="form-label">ID </label>
+              <input type="text" name="id" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.id">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">dateApplicationDebut </label>
+              <input type="text" name="ref"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">dateApplicationFin </label>
+              <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">date </label>
+              <input type="text" name="derniereAnneePaye" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">pourcentageRetard </label>
+              <input type="text" name="dernierTrimestrePaye" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">pourcentageMajoration </label>
+              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.date">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">montantParNuite </label>
+              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.categorielocale">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Categorielocale</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
   </div>
-
-
 </div>
+
