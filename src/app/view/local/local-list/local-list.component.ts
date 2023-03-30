@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LocaleService} from "../../../controller/service/locale.service";
 import {Locale} from "../../../controller/model/locale.model";
 
@@ -8,7 +8,7 @@ import {Locale} from "../../../controller/model/locale.model";
   templateUrl: './local-list.component.html',
   styleUrls: ['./local-list.component.css']
 })
-export class LocalListComponent {
+export class LocalListComponent implements OnInit{
 
   constructor(private localeService: LocaleService) { }
 
@@ -23,6 +23,7 @@ export class LocalListComponent {
   public findAll():void {
     this.localeService.findAll().subscribe(data => {
       this.locales= data;
+      console.log(this.locales);
 
     });
   }
