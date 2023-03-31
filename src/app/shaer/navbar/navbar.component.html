@@ -1,6 +1,6 @@
 
 
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent site-navbar">
   <div class="container d-flex justify-content-between align-items-center" >
 
     <div id="logo">
@@ -9,15 +9,31 @@
     </div>
 
     <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto active" routerLink="" routerLinkActive="active-link"
-               [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <ul class="site-menu">
+        <li><a  class="nav-link scrollto active" routerLink="" routerLinkActive="active-link"
+               [routerLinkActiveOptions]="{exact:true}"><span>Home</span></a></li>
         <li><a class="nav-link scrollto" href="local-create">Local</a></li>
         <li><a class="nav-link scrollto " routerLink="redevable-create" routerLinkActive="active-link">Redevable</a></li>
-        <li><a class="nav-link scrollto" routerLink="taxe-trimestriel-ceate" routerLinkActive="active-link">Taxe trimestrial</a></li>
-        <li><a class="nav-link scrollto" routerLink="taxe-anuelle-create" routerLinkActive="active-link">taxe anuelle</a></li>
-        <li><a class="nav-link scrollto" routerLink="taux-taxe-anuelle-create" routerLinkActive="active-link">taux taxe anuelle</a></li>
-        <li><a class="nav-link scrollto" routerLink="taux-taxe-trimestriel-create" routerLinkActive="active-link">TauxTaxe</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Taxe
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="nav-link scrollto" routerLink="taxe-anuelle-create" routerLinkActive="active-link">taxe anuelle</a></li>
+            <li><a class="nav-link scrollto" routerLink="taxe-trimestriel-ceate" routerLinkActive="active-link">Taxe trimestrial</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Taux Taxe
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="nav-link scrollto" routerLink="taux-taxe-anuelle-create" routerLinkActive="active-link">taux taxe anuelle</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </ul>
+        </li>
         <li><a class="nav-link scrollto" routerLink="notification-local-list" routerLinkActive="active-link">Notification</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
