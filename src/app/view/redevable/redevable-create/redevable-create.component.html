@@ -1,4 +1,4 @@
-
+<br>
 <!--Main Content-->
 <div class="mt-5">
   <h1 class="text-center">List Locale</h1>
@@ -6,9 +6,11 @@
     <!--Add Local Button-->
     <div class="my-4">
       <div class="my-4">
+        <div class="toolbar">
         <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Local</button>
-        <div class="search-employees">
+        <div class="search-redevable">
           <input type="search" class="form-control" placeholder="Search Redevable">
+        </div>
         </div>
       </div>
     </div>
@@ -50,7 +52,16 @@
     </div>
 <app-redevable-edit></app-redevable-edit>
 
-
+    <div class="alert alert-success alert-dismissible d-flex align-items-center fade show">
+      <i class="bi-check-circle-fill"></i>
+      <strong class="mx-2">Success!</strong> Your message has been sent successfully.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible d-flex align-items-center fade show">
+      <i class="bi-exclamation-octagon-fill"></i>
+      <strong class="mx-2">Error!</strong> A problem has been occurred while submitting your data.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
   </div>
 </div>
 

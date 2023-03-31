@@ -40,8 +40,7 @@ const routes: Routes = [
   {path:'local-create',component:LocalCreateComponent},
   {path:'local-list',component:LocalListComponent},
   {path:'notification-local-create',component:NotificationLocalCreateComponent},
-  {path:'taux-taxe-trimestriel-create',component:TauxTaxeTrimestrielCreateComponent},
-  {path:'taux-taxe-anuelle-create',component:TauxTaxeAnuelleCreateComponent}
+  {path:'taux-taxe-trimestriel-create',component:TauxTaxeTrimestrielCreateComponent}
 ];
 
 @NgModule({
