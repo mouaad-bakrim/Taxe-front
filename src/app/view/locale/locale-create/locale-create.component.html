@@ -1,0 +1,51 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new Redevable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form  >
+            <div class="mb-3">
+              <label  class="form-label">Reference </label>
+              <input type="text" name="ref"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="locale.ref">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">CIN </label>
+              <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="locale.redevable.cin">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">DAP </label>
+              <input type="text" name="derniereAnneePaye" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="locale.derniereAnneePaye">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">DTP </label>
+              <input type="text" name="dernierTrimestrePaye" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="locale.dernierTrimestrePaye">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Rue </label>
+              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="locale.rue.libelle">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Categorie </label>
+              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="locale.categorieLocale.libelle">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add redevable</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,22 +1,25 @@
 <br>
 <!--Main Content-->
 <div class="mt-5">
-  <h1 class="text-center">List Locale</h1>
   <div class="container">
+    <div class="table-wrapper">
+      <div class="table-title">
     <!--Add Local Button-->
     <div class="my-4">
       <div class="my-4">
         <div class="toolbar">
-        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Local</button>
-        <div class="search-redevable">
-          <input type="search" class="form-control" placeholder="Search Redevable">
-        </div>
+          <button type="button" class="btn btn-info add-new" data-bs-toggle="modal" data-bs-target="#addEmployee"><i class="fa fa-plus"></i> Add New</button>
+          <div class="search-box">
+            <i class="material-icons">&#xE8B6;</i>
+            <input type="text" class="form-control" placeholder="Search&hellip;">
+          </div>
         </div>
       </div>
     </div>
 
     <app-redevable-list></app-redevable-list>
 
+      </div>
     <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -51,6 +54,18 @@
       </div>
     </div>
 <app-redevable-edit></app-redevable-edit>
+      <div class="clearfix">
+        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+        <ul class="pagination">
+          <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+          <li class="page-item"><a href="#" class="page-link">1</a></li>
+          <li class="page-item"><a href="#" class="page-link">2</a></li>
+          <li class="page-item active"><a href="#" class="page-link">3</a></li>
+          <li class="page-item"><a href="#" class="page-link">4</a></li>
+          <li class="page-item"><a href="#" class="page-link">5</a></li>
+          <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+      </div>
 
     <div class="alert alert-success alert-dismissible d-flex align-items-center fade show">
       <i class="bi-check-circle-fill"></i>
@@ -63,6 +78,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
   </div>
+</div>
 </div>
 
 
