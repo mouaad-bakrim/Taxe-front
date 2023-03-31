@@ -2,29 +2,28 @@
   <h1 class="text-center">List Notification</h1>
   <div class="container">
     <div class="my-4">
-      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Notification</button>
-      <app-notification-local-create></app-notification-local-create>
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Notification</button> <app-notification-locale-create></app-notification-locale-create>
+
     </div>
-    <table class="table border" *ngIf="notifications.length !=0" >
+    <table class="table border table-hover bg-light"  >
       <thead>
       <tr>
-        <th scope="col">ID</th>
         <th scope="col">numero</th>
         <th scope="col">trimestre</th>
         <th scope="col">annee</th>
         <th scope="col">ref de local</th>
         <th scope="col">cin de redevabl</th>
         <th scope="col">mantantEstimation</th>
+        <th scope="col">Action</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of notifications ; index as i">
-        <td>{{c.id}}</td>
+      <tr *ngFor="let c of notificationLocales ; index as i">
         <td>{{c.numero}}</td>
         <td>{{c.trimestre}}</td>
         <td>{{c.annee}}</td>
-        <td>{{c.local.id}}</td>
-        <td>{{c.redevable.id}}</td>
+        <td>{{c.locale.ref}}</td>
+        <td>{{c.redevable.cin}}</td>
         <td>{{c.mantantEstimation}}</td>
         <td>
           <span class=" fa fa-trash btn  btn-outline-danger" (click)="deleteById(c,i)"></span>
@@ -34,5 +33,5 @@
       </tbody>
     </table>
 
-</div>
+  </div>
 </div>

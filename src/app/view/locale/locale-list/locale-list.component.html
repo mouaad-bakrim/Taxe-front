@@ -1,0 +1,37 @@
+<div class="mt-5">
+  <h1 class="text-center">List Notification</h1>
+  <div class="container">
+    <div class="my-4">
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Notification</button> <app-locale-create></app-locale-create>
+
+    </div>
+    <table class="table border table-hover bg-light"  >
+      <thead>
+      <tr>
+        <th scope="col">ref</th>
+        <th scope="col">derniereAnneePaye</th>
+        <th scope="col">dernierTrimestrePaye</th>
+        <th scope="col">categorieLocale</th>
+        <th scope="col">redevabl</th>
+        <th scope="col">rue</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of locales ; index as i">
+        <td>{{c.ref}}</td>
+        <td>{{c.derniereAnneePaye}}</td>
+        <td>{{c.dernierTrimestrePaye}}</td>
+        <td>{{c.categorieLocale.libelle}}</td>
+        <td>{{c.redevable.cin}}</td>
+        <td>{{c.rue.libelle}}</td>
+        <td>
+          <span class=" fa fa-trash btn  btn-outline-danger" (click)="deleteById(c,i)"></span>
+          <span type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

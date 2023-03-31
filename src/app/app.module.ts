@@ -10,17 +10,11 @@ import {RedevableCreateComponent} from "./view/redevable/redevable-create/redeva
 import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule, homeLink, indexLink} from "./app-routing.module";
-import {LocalCreateComponent} from "./view/local/local-create/local-create.component";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
 import {TauxTaxeAnuelleCreateComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-create/taux-taxe-anuelle-create.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
 import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
-import {LocalListComponent} from "./view/local/local-list/local-list.component";
-import {
-  NotificationLocalCreateComponent
-} from "./view/notification-local/notification-local-create/notification-local-create.component";
-import { NotificationLocalListComponent } from './view/notification-local/notification-local-list/notification-local-list.component';
 import {CategoriesCreateComponent} from "./view/categorie/categorie-create/categories-create.component";
 import {
   TauxTaxeTrimestrielCreateComponent
@@ -29,6 +23,14 @@ import {RedevableEditComponent} from "./view/redevable/redevable-edit/redevable-
 import {
   TauxTaxeTrimestriellistComponent
 } from "./view/taux-taxe-trimestriel/taux-taxe-trimestriel-list/taux-taxe-trimestriel-list.component";
+import {LocaleListComponent} from "./view/locale/locale-list/locale-list.component";
+import {
+  NotificationLocaleListComponent
+} from "./view/NotificationLocale/notification-locale-list/notification-locale-list.component";
+import {
+  NotificationLocaleCreateComponent
+} from "./view/NotificationLocale/notification-locale-create/notification-locale-create.component";
+import {LocaleCreateComponent} from "./view/locale/locale-create/locale-create.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -37,8 +39,8 @@ const appRoutes: Routes = [
   {path:'redevable-list',component:RedevableListComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
-  {path:'local-list',component:LocalListComponent},
-  {path:'notification-local-list',component:NotificationLocalListComponent}
+  {path:'locale-list',component:LocaleListComponent},
+  {path:'notification-locale-list',component:NotificationLocaleListComponent}
 ];
 @NgModule({
   declarations: [
@@ -48,14 +50,14 @@ const appRoutes: Routes = [
     NavbarComponent,
     RueCreateComponent,
     RedevableCreateComponent,
-    LocalCreateComponent,
-    LocalListComponent,
+    LocaleCreateComponent,
+    LocaleListComponent,
     TauxTaxeAnuelleCreateComponent,
     TaxeAnuelleCreateComponent,
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,
-    NotificationLocalCreateComponent,
-    NotificationLocalListComponent,
+    NotificationLocaleCreateComponent,
+    NotificationLocaleListComponent,
     CategoriesCreateComponent,
     TauxTaxeTrimestrielCreateComponent,
     RedevableEditComponent,

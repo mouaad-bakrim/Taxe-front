@@ -1,12 +1,12 @@
-import { Local} from "./local.model";
+import { Locale} from "./locale.model";
 import {Redevable} from "./redevable.model";
 
-export class NotificationLocal {
+export class NotificationLocale {
   public id!:number;
   public annee!:number;
   public numero!:number;
   public trimestre!:number;
-  public local= new Local();
+  public locale= new Locale();
   public redevable= new Redevable();
   public  mantantEstimation!:number;
 
