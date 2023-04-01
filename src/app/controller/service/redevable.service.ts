@@ -26,6 +26,9 @@ export class RedevableService {
   public deleteByCin(cin: string): Observable<number> {
       return this.http.delete<number>(environment.url + 'redevable/cin/' + cin);
     }
+    public update(redevable:Redevable): Observable<number>{
+    return this.http.put<number>(environment.url+'redevable/cin/',redevable);
+    }
   public findAll(): void {
     this.http.get<Array<Redevable>>(environment.url+'redevable/').subscribe(data => {
    this.redevables=data;
@@ -58,4 +61,6 @@ export class RedevableService {
   set redevables(value: Array<Redevable>) {
     this._redevables = value;
   }
+
+
 }

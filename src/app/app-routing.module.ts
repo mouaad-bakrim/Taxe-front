@@ -22,6 +22,7 @@ import {LocaleListComponent} from "./view/locale/locale-list/locale-list.compone
 import {
   NotificationLocaleCreateComponent
 } from "./view/NotificationLocale/notification-locale-create/notification-locale-create.component";
+import {RedevableEditComponent} from "./view/redevable/redevable-edit/redevable-edit.component";
 
 export let indexLink='index';
 export let taxeLink='taxe';
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:homeLink,component:HomeComponent},
   {path:redevableLink,component:RedevableCreateComponent},
   {path:'redevable-list',component:RedevableListComponent},
+  {path:'redevable-edit',component:RedevableEditComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taux-taxe-anuelle-create',component:TauxTaxeAnuelleCreateComponent},
   {path:'taux-taxe-anuelle-list',component:TauxTaxeAnuelleCreateComponent},
