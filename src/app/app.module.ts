@@ -31,6 +31,9 @@ import {
   NotificationLocaleCreateComponent
 } from "./view/NotificationLocale/notification-locale-create/notification-locale-create.component";
 import {LocaleCreateComponent} from "./view/locale/locale-create/locale-create.component";
+import {
+  TauxTaxeAnuelleListComponent
+} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-list/taux-taxe-anuelle-list.component";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
