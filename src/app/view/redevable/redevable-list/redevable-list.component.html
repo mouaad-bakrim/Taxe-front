@@ -1,7 +1,19 @@
+<div class="my-4">
+  <div class="my-4">
+    <div class="toolbar">
+      <button type="button" class="btn btn-info add-new" data-bs-toggle="modal" data-bs-target="#addEmployee"><i class="fa fa-plus"></i> Add New</button>
+      <div class="search-box">
+        <i class="material-icons">&#xE8B6;</i>
+        <input type="text" name="serch"  [(ngModel)]="filterTerm" class="form-control" placeholder="Search&hellip;" >
+      </div>
+    </div>
+  </div>
+</div>
 <div class="mt-5">
 <table class="table border" >
 
-  <thead>
+  <thead class="thead-dark">
+
   <tr>
     <th scope="col">ID </th>
     <th scope="col">Nom <i class="fa fa-sort"></i></th>
@@ -13,15 +25,20 @@
 
   </thead>
   <tbody>
-  <tr *ngFor="let c of redevables; index as i">
+  <tr *ngFor="let c of redevables | filter: filterTerm; index as i">
     <td>{{c.id}}</td>
     <td>{{c.nom}}</td>
     <td>{{c.prenom}}</td>
     <td>{{c.cin}}</td>
-    <td>
+    <td style="width: 30%">
 
-      <span (click)="deleteByCin(c,i)" type="button" class=" fa fa-trash btn  btn-outline-danger" ></span>
-      <button (click)="editRedevable(c,i)"  type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
+      <a class="btn btn-danger" (click)="deleteByCin(c,i)">Delete</a>
+      <a (click)="editRedevable(c,i)" routerLink="redevable-edit{{c.id}}" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#editEmployee">Edit</a>
+      <a class="btn btn-success" >Download</a>
+
+
+
+
     </td>
   </tr>
   </tbody>

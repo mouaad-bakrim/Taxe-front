@@ -31,6 +31,8 @@ import {
   NotificationLocaleCreateComponent
 } from "./view/NotificationLocale/notification-locale-create/notification-locale-create.component";
 import {LocaleCreateComponent} from "./view/locale/locale-create/locale-create.component";
+import {TaxeAnuelleListComponent} from "./view/taxe-anuelle/taxe-anuelle-list/taxe-anuelle-list.component";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 const appRoutes: Routes = [
   {path:indexLink,component:IndexComponent},
@@ -54,6 +56,7 @@ const appRoutes: Routes = [
     LocaleListComponent,
     TauxTaxeAnuelleCreateComponent,
     TaxeAnuelleCreateComponent,
+    TaxeAnuelleListComponent,
     TaxeTrimestrielCeateComponent,
     RedevableListComponent,
     NotificationLocaleCreateComponent,
@@ -70,7 +73,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

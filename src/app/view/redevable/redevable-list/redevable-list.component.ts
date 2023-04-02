@@ -8,6 +8,9 @@ import {Redevable} from "../../../controller/model/redevable.model";
   styleUrls: ['./redevable-list.component.css']
 })
 export class RedevableListComponent implements OnInit{
+  filterTerm !: string;
+
+
   constructor(public redevableService: RedevableService) {
   }
 

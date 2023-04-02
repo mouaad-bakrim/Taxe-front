@@ -13,7 +13,6 @@ export class RedevableCreateComponent implements OnInit{
 
 
 
-
   constructor( private redevableService : RedevableService) { }
   ngOnInit():void {
 

@@ -37,7 +37,6 @@ const routes: Routes = [
   {path:'redevable-edit',component:RedevableEditComponent},
   {path:'rue-create',component:RueCreateComponent},
   {path:'taux-taxe-anuelle-create',component:TauxTaxeAnuelleCreateComponent},
-  {path:'taux-taxe-anuelle-list',component:TauxTaxeAnuelleCreateComponent},
   {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
   {path:taxeLink,component:TaxeTrimestrielCeateComponent},
   {path:'locale-create',component:LocaleCreateComponent},

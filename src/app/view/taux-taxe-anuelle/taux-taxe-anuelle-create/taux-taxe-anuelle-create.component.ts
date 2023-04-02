@@ -18,7 +18,7 @@ export class TauxTaxeAnuelleCreateComponent implements OnInit {
 
 
   public save(): void{
-    this.tauxtaxeanuelleService.save().subscribe(
+    this.tauxtaxeanuelleService.save(this.tauxTaxeAnuelle).subscribe(
       data => {
         if (data == null) {
           alert('failure : ref exist')

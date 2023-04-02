@@ -10,69 +10,59 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class TauxtaxeanuelleService {
-  private _tauxTaxeAnuelle = {} as TauxTaxeAnuelle;
-  private _tauxTaxeAnuelles: Array<TauxTaxeAnuelle> = [];
+  public tauxTaxeAnuelle={} as TauxTaxeAnuelle;
+  public tauxTaxeAnuelles: Array<TauxTaxeAnuelle>=[];
 
-  constructor(private http: HttpClient) {
-  }
-
-  public save(): Observable<TauxTaxeAnuelle>{
-    return  this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle.categorielocale);
-  }
-
- /* public save(): void {
-    this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle).subscribe(data => {
+  private _url = "http://localhost:8036/api/v1/tauxTaxeAnuelle/";
+  constructor(private http: HttpClient) { }
+  /*
+  public save(): void {
+    this.http.post<TauxTaxeTrimestriel>(environment.url+'taux-taxe-trimestriel/', this.tauxTaxe).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
         alert('save error::: ref exist');
       }
     });
-  }*/
-/*
+  }
   public findAll(): void {
-    this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/').subscribe(
+    this.http.get<Array<TauxTaxeTrimestriel>>(environment.url+'taux-taxe-trimestriel/').subscribe(
       data => {
-        this._tauxTaxeAnuelles = data;
+        this.tauxTaxeTrimestriels = data;
       }, error => {
         alert('Error');
       }
     );
   }*/
 
-
+  public save(tauxTaxeAnuelle: TauxTaxeAnuelle): Observable<TauxTaxeAnuelle> {
+    return this.http.post<TauxTaxeAnuelle>(this._url, tauxTaxeAnuelle);
+  }
   public findAll(): Observable<Array<TauxTaxeAnuelle>> {
-    return this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/');
+    return this.http.get<Array<TauxTaxeAnuelle>>(this._url);
+  }
+  public findByDateApplicationFin(dateApplicationFin: Date): Observable<TauxTaxeAnuelle> {
+
+    return this.http.get<TauxTaxeAnuelle>(environment.url+'TauxTaxeAnuelle/dateApplicationFin/'+dateApplicationFin);
   }
 
 
-  get tauxTaxeAnuelle(): TauxTaxeAnuelle {
-    if (this._tauxTaxeAnuelle == null) {
-      this._tauxTaxeAnuelle = new TauxTaxeAnuelle();
+  get tauxTaxe(): TauxTaxeAnuelle {
+    if (this.tauxTaxeAnuelle == null) {
+      this.tauxTaxeAnuelle == new TauxTaxeAnuelle();
     }
-    return this._tauxTaxeAnuelle;
+    return this.tauxTaxeAnuelle;
   }
 
-  set tauxTaxeAnuelle(value: TauxTaxeAnuelle) {
-    this._tauxTaxeAnuelle = value;
+  set tauxTaxe(value: TauxTaxeAnuelle) {
+    this.tauxTaxeAnuelle = value;
   }
 
-  get tauxTaxeAnuelles(): Array<TauxTaxeAnuelle> {
-    if (this._tauxTaxeAnuelles == null) {
-      this._tauxTaxeAnuelles = new Array<TauxTaxeAnuelle>();
-    }
-    return this._tauxTaxeAnuelles;
+  get tauxTaxes(): Array<TauxTaxeAnuelle> {
+    return this.tauxTaxeAnuelles;
   }
 
-  set tauxTaxeAnuelles(value: Array<TauxTaxeAnuelle>) {
-    this._tauxTaxeAnuelles = value;
-  }
-
-  get url(): string {
-    return this.url;
-  }
-
-  set url(value: string) {
-    this.url = value;
+  set tauxTaxes(value: Array<TauxTaxeAnuelle>) {
+    this.tauxTaxeAnuelles = value;
   }
 }

@@ -10,19 +10,19 @@
         <form >
           <div class="mb-3">
             <label  class="form-label">Name </label>
-            <input type="text" name="nom"  class="form-control" aria-describedby="emailHelp" >
+            <input type="text" name="nom"  class="form-control" aria-describedby="emailHelp" [(ngModel)]="monredevable.nom">
           </div>
           <div class="mb-3">
             <label class="form-label">Email </label>
-            <input type="email" name="prenom"  class="form-control"  aria-describedby="emailHelp">
+            <input type="email" name="prenom"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="monredevable.prenom">
           </div>
           <div class="mb-3">
             <label class="form-label">Salary </label>
-            <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp">
+            <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="monredevable.cin">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Update </button>
+            <button (click)="update(monredevable)" type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Update </button>
           </div>
         </form>
 
