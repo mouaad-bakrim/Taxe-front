@@ -1,34 +1,41 @@
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
-  <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add new Local</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="container">
+          <h1 class="text-center">Update</h1>
+          </div>
+          <button routerLink="/locale-list/" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+
 
           <form>
             <label >CIN</label>
             <div >
-              <input type="text" name="cin" class="form-control" aria-describedby="emailHelp" [(ngModel)]="locale.redevable.cin">
+              <input type="text" name="cin" class="form-control" aria-describedby="emailHelp" [(ngModel)]="monlocale.redevable.cin">
             </div>
             <label >Reference</label>
             <div >
-              <input type="text" name="ref" class="form-control" aria-describedby="emailHelp" [(ngModel)]="locale.ref">
+              <input type="text" name="ref" class="form-control" aria-describedby="emailHelp" [(ngModel)]="monlocale.ref">
             </div>
 
             <div class="form-row">
               <div  class="col-md-6">
                 <label >Dernier Annee Paye</label>
-                <input type="text" name="derniereAnneePaye" class="form-control" aria-describedby="emailHelp" [(ngModel)]="locale.derniereAnneePaye">
+                <input type="text" name="derniereAnneePaye" class="form-control" aria-describedby="emailHelp" [(ngModel)]="monlocale.derniereAnneePaye">
               </div>
 
 
               <div class=" col-md-6">
                 <label >Dernier Trimestre Paye</label>
-                <select  class="form-control" name="dernierTrimestrePaye" [(ngModel)]="locale.dernierTrimestrePaye" >
+                <select  class="form-control" name="dernierTrimestrePaye" [(ngModel)]="monlocale.dernierTrimestrePaye" >
                   <option selected>Choose...</option>
                   <option>1</option>
                   <option>2</option>
@@ -42,7 +49,7 @@
             <div class="form-row">
               <div class=" col-md-6">
                 <label >Categorie</label>
-                <select id="categorie" class="form-select" name="categorieLibellr" [(ngModel)]="locale.categorieLocale.libelle" >
+                <select id="categorie" class="form-select" name="categorieLibellr" [(ngModel)]="monlocale.categorieLocale.libelle" >
                   <option *ngFor="let c of categorieLocales" value="{{c.libelle}}">{{c.libelle}}</option>
                 </select>
               </div>
@@ -51,16 +58,15 @@
 
               <div class=" col-md-6">
                 <label >Rue</label>
-                <select id="rue" class="form-select" name="rueLibelle" [(ngModel)]="locale.rue.libelle" >
+                <select id="rue" class="form-select" name="rueLibelle" [(ngModel)]="monlocale.rue.libelle" >
                   <option *ngFor="let d of rues" value="{{d.libelle}}">{{d.libelle}}</option>
                 </select>
               </div>
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Local
-              </button>
+              <button routerLink="/locale-list/" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+              <button (click)="update(monlocale)" routerLink="/locale-list/" type="button" class="btn btn-primary" data-bs-dismiss="modal">update</button>
             </div>
           </form>
 

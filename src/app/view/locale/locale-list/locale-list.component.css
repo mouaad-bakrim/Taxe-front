@@ -1,0 +1,9 @@
+/*
+ <button class="  btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee" type="submit">
+          </button>
+
+          <a routerLink="/locale-edit/{{c.id}}">
+            <i type="button" class="  btn btn-outline-primary me-2 fa fa-edit btn "
+               data-bs-toggle="modal" data-bs-target="#editEmployee"></i>
+          </a>
+ */

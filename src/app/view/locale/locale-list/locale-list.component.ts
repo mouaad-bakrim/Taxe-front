@@ -17,6 +17,7 @@ export class LocaleListComponent implements OnInit {
     this.findAll();
   }
 
+
   public deleteById(locale: Locale, index: number): void {
     this.localeService.deleteById(locale.id).subscribe(data => {
       if (data > 0) {
@@ -25,6 +26,17 @@ export class LocaleListComponent implements OnInit {
         alert('DEL ERROR')
       }
     });
+  }
+
+  public update(locale: Locale, index: number): void {
+    this.localeService.update(locale)
+      .subscribe(data => {
+        if (data > 0) {
+          this.locales.splice(index, 1);
+        } else {
+          alert('DEL ERROR')
+        }
+      })
   }
 
   public findAll(): void {
