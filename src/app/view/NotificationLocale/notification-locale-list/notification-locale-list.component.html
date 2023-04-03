@@ -2,10 +2,13 @@
   <h1 class="text-center">List Notification</h1>
   <div class="container">
     <div class="my-4">
-      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add Notification</button> <app-notification-locale-create></app-notification-locale-create>
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add
+        Notification
+      </button>
+      <app-notification-locale-create></app-notification-locale-create>
 
     </div>
-    <table class="table border table-hover bg-light"  >
+    <table class="table border table-hover bg-light">
       <thead>
       <tr>
         <th scope="col">numero</th>
@@ -27,7 +30,8 @@
         <td>{{c.mantantEstimation}}</td>
         <td>
           <span class=" fa fa-trash btn  btn-outline-danger" (click)="deleteById(c,i)"></span>
-          <span type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></span>
+          <span type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal"
+                data-bs-target="#editEmployee"></span>
         </td>
       </tr>
       </tbody>

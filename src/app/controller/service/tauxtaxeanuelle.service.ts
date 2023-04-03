@@ -16,29 +16,30 @@ export class TauxtaxeanuelleService {
   constructor(private http: HttpClient) {
   }
 
-  public save(): Observable<TauxTaxeAnuelle>{
-    return  this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle.categorielocale);
+  public save(): Observable<TauxTaxeAnuelle> {
+    return this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle.categorielocale);
   }
 
- /* public save(): void {
-    this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle).subscribe(data => {
-      if (data != null) {
-        alert('save success');
-      } else {
-        alert('save error::: ref exist');
-      }
-    });
-  }*/
-/*
-  public findAll(): void {
-    this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/').subscribe(
-      data => {
-        this._tauxTaxeAnuelles = data;
-      }, error => {
-        alert('Error');
-      }
-    );
-  }*/
+  /* public save(): void {
+     this.http.post<TauxTaxeAnuelle>(environment.url + 'taux-taxe-anuelle/', this.tauxTaxeAnuelle).subscribe(data => {
+       if (data != null) {
+         alert('save success');
+       } else {
+         alert('save error::: ref exist');
+       }
+     });
+   }*/
+
+  /*
+    public findAll(): void {
+      this.http.get<Array<TauxTaxeAnuelle>>(environment.url + 'taux-taxe-anuelle/').subscribe(
+        data => {
+          this._tauxTaxeAnuelles = data;
+        }, error => {
+          alert('Error');
+        }
+      );
+    }*/
 
 
   public findAll(): Observable<Array<TauxTaxeAnuelle>> {

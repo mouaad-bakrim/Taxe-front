@@ -1,10 +1,14 @@
-
+<br>
+<br>
+<br>
 <h1 class="text-center">List Locale</h1>
 <div class="container">
   <!--Add Local Button-->
   <div class="my-4">
     <div class="my-4">
-      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add CategorieLocal</button>
+      <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit">Add
+        CategorieLocal
+      </button>
     </div>
   </div>
 
@@ -18,38 +22,52 @@
         </div>
         <div class="modal-body">
 
-          <form  >
+          <form>
             <div class="mb-3">
-              <label  class="form-label">ID </label>
-              <input type="text" name="id" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.id">
+              <label class="form-label">ID </label>
+              <input type="text" name="id" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.id">
             </div>
             <div class="mb-3">
-              <label  class="form-label">dateApplicationDebut </label>
-              <input type="text" name="ref"  class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard">
+              <label class="form-label">PourcentageRetard </label>
+              <input type="text" name="pourcentageRetard" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard">
             </div>
             <div class="mb-3">
-              <label  class="form-label">dateApplicationFin </label>
-              <input type="text" name="cin" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration">
+              <label class="form-label">PourcentageMajoration </label>
+              <input type="text" name="pourcentageMajoration" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration">
             </div>
             <div class="mb-3">
-              <label  class="form-label">date </label>
-              <input type="text" name="derniereAnneePaye" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite">
+              <label class="form-label">MontantParNuite </label>
+              <input type="text" name="montantParNuite" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.montantParNuite">
             </div>
             <div class="mb-3">
-              <label  class="form-label">pourcentageRetard </label>
-              <input type="text" name="dernierTrimestrePaye" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin">
+              <label class="form-label">DateApplicationDebut </label>
+              <input type="date" name="dateApplicationDebut" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.dateApplicationDebut">
             </div>
             <div class="mb-3">
-              <label class="form-label">pourcentageMajoration </label>
-              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.date">
+              <label class="form-label">DateApplicationFin </label>
+              <input type="date" name="dateApplicationFin" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin">
             </div>
             <div class="mb-3">
-              <label class="form-label">montantParNuite </label>
-              <input type="text" name="id" class="form-control"   aria-describedby="emailHelp" [(ngModel)]="tauxTaxeTrimestriel.categorielocale">
+              <label class="form-label">reference </label>
+              <input type="text" name="reference" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.reference">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Categorielocale </label>
+              <input type="text" name="categorielocale" class="form-control" aria-describedby="emailHelp"
+                     [(ngModel)]="tauxTaxeTrimestriel.categorielocale.id">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Categorielocale</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add
+                Categorielocale
+              </button>
             </div>
           </form>
 

@@ -3,31 +3,36 @@ import {TauxtaxetrimestrielService} from "../../../controller/service/tauxtaxetr
 import {TauxTaxeTrimestriel} from "../../../controller/model/taux-taxe-trimestriel.model";
 
 @Component({
-  selector: 'app-taux-taxe-trimestriel-create',
-  templateUrl: './taux-taxe-trimestriel-create.component.html',
-  styleUrls: ['./taux-taxe-trimestriel-create.component.css']
+  selector: 'app-taux-taxe-trimestriel-edit.component',
+  templateUrl: './taux-taxe-trimestriel-edit.component.html',
+  styleUrls: ['./taux-taxe-trimestriel-edit.component.css']
 })
-export class TauxTaxeTrimestrielCreateComponent implements OnInit {
+export class TauxTaxeTrimestrielEditComponent implements OnInit {
   ngOnInit(): void {
+    this.findByDateApplicationFin(new Date())
   }
 
-  public save(): void {
-    this.tauxtaxetrimestrielService.save().subscribe(
+  public update(): void {
+    this.tauxtaxetrimestrielService.update().subscribe(
       data => {
         if (data == null) {
           alert('failure : ref exist')
         } else {
-          this.tauxTaxeTrimestriels.push({...this.tauxTaxeTrimestriel});
-          this.tauxtaxetrimestrielService.tauxTaxeTrimestriel = new TauxTaxeTrimestriel();
+          //this.tauxtaxetrimestriel = null;
           alert('success : tauxtaxetrimestriel save')
         }
       }
     );
   }
 
-  constructor(private tauxtaxetrimestrielService: TauxtaxetrimestrielService) {
+  public findByDateApplicationFin(dateApplicationFin: Date) {
+    this.tauxtaxetrimestrielService.findByDateApplicationFin(dateApplicationFin).subscribe(
+      data => this.tauxTaxeTrimestriel = data
+    );
   }
 
+  constructor(private tauxtaxetrimestrielService: TauxtaxetrimestrielService) {
+  }
 
   get tauxTaxeTrimestriel(): TauxTaxeTrimestriel {
     return this.tauxtaxetrimestrielService.tauxTaxeTrimestriel;

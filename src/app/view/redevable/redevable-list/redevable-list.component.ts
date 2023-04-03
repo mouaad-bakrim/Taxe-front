@@ -7,11 +7,11 @@ import {Redevable} from "../../../controller/model/redevable.model";
   templateUrl: './redevable-list.component.html',
   styleUrls: ['./redevable-list.component.css']
 })
-export class RedevableListComponent implements OnInit{
+export class RedevableListComponent implements OnInit {
   constructor(public redevableService: RedevableService) {
   }
 
-  public findAll(): void{
+  public findAll(): void {
     this.redevableService.findAll();
   }
 
@@ -24,12 +24,15 @@ export class RedevableListComponent implements OnInit{
       }
     });
   }
- public editRedevable(redevable: Redevable, index: number): void{
 
- }
+  public editRedevable(redevable: Redevable, index: number): void {
+
+  }
+
   ngOnInit(): void {
     this.findAll();
   }
+
   get redevable(): Redevable {
     return this.redevableService._redevable;
   }

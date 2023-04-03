@@ -1,29 +1,30 @@
 <div class="mt-5">
-<table class="table border" >
+  <table class="table border">
 
-  <thead>
-  <tr>
-    <th scope="col">ID </th>
-    <th scope="col">Nom <i class="fa fa-sort"></i></th>
-    <th scope="col">renom</th>
-    <th scope="col">cin</th>
-    <th scope="col">Action</th>
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nom <i class="fa fa-sort"></i></th>
+      <th scope="col">renom</th>
+      <th scope="col">cin</th>
+      <th scope="col">Action</th>
 
-  </tr>
+    </tr>
 
-  </thead>
-  <tbody>
-  <tr *ngFor="let c of redevables; index as i">
-    <td>{{c.id}}</td>
-    <td>{{c.nom}}</td>
-    <td>{{c.prenom}}</td>
-    <td>{{c.cin}}</td>
-    <td>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of redevables; index as i">
+      <td>{{c.id}}</td>
+      <td>{{c.nom}}</td>
+      <td>{{c.prenom}}</td>
+      <td>{{c.cin}}</td>
+      <td>
 
-      <span (click)="deleteByCin(c,i)" type="button" class=" fa fa-trash btn  btn-outline-danger" ></span>
-      <button (click)="editRedevable(c,i)"  type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
-    </td>
-  </tr>
-  </tbody>
-</table>
-  </div>
+        <span (click)="deleteByCin(c,i)" type="button" class=" fa fa-trash btn  btn-outline-danger"></span>
+        <button (click)="editRedevable(c,i)" type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn "
+                data-bs-toggle="modal" data-bs-target="#editEmployee"></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

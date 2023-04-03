@@ -1,44 +1,36 @@
-<br>
-<br>
-<br>
-<br>
+
 <div class="container">
   <div class="border">
     <button class="btn btn-sm btn-outline-primary">
-      <i id="myicon" class="fa fa-search"></i>serch</button>
+      <i id="myicon" class="fa fa-search"></i>serch
+    </button>
   </div>
-  <table class="table table-bordered table-striped">
+  <table class="table border table-hover bg-light">
     <thead>
     <tr>
       <th>ID</th>
       <th>dateApplicationDebut</th>
       <th>dateApplicationFin</th>
-      <th>date</th>
+      <th>reference</th>
       <th>pourcentageRetard</th>
       <th>pourcentageMajoration</th>
       <th>montantParNuite</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let TauxTaxeTrimestriel of tauxTaxeTrimestriels ; index as i">
-      <td>{{TauxTaxeTrimestriel.id}}</td>
-      <td>{{TauxTaxeTrimestriel.dateApplicationDebut}}</td>
-      <td>{{TauxTaxeTrimestriel.dateApplicationFin}}</td>
-      <td>{{TauxTaxeTrimestriel.date}}</td>
-      <td>{{TauxTaxeTrimestriel.pourcentageRetard}}</td>
-      <td>{{TauxTaxeTrimestriel.pourcentageMajoration}}</td>
-      <td>{{TauxTaxeTrimestriel.montantParNuite}}</td>
+    <tr *ngFor="let t of tauxTaxeTrimestriels ; index as i">
+      <td>{{t.id}}</td>
+      <td>{{t.dateApplicationDebut}}</td>
+      <td>{{t.dateApplicationFin}}</td>
+      <td>{{t.reference}}</td>
+      <td>{{t.pourcentageRetard}}</td>
+      <td>{{t.pourcentageMajoration}}</td>
+      <td>{{t.montantParNuite}}</td>
       <td>
-        <button class="btn btn-sm btn-info">
-          <i class="fa fa-search"></i>
-          Details
-        </button>
-        <button class="btn btn-sm btn-warning" (click)="edit = true">
-          <i class="fa fa-edit"></i>
-          Edit
-        </button>
-        <button class="btn btn-sm btn-danger">
-          <i class="fa fa-remove"></i>Delete</button>
+        <span class=" fa fa-trash btn  btn-outline-danger" ></span>
+        <span type="button" class=" btn btn-outline-primary me-2 fa fa-edit btn " data-bs-toggle="modal"
+              data-bs-target="#editEmployee"></span>
       </td>
     </tr>
     </tbody>

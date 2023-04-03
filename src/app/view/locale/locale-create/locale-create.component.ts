@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {LocaleService} from "../../../controller/service/locale.service";
 import {Locale} from "../../../controller/model/locale.model";
 
@@ -8,14 +8,14 @@ import {Locale} from "../../../controller/model/locale.model";
   styleUrls: ['./locale-create.component.css']
 })
 export class LocaleCreateComponent {
-  public save() : void{
+  public save(): void {
     this.localeService.save().subscribe(
       data => {
         if (data == null) {
           alert('failure : error exist')
-        }else{
-          this.locales.push({...this .locale});
-           this.localeService.locale=new Locale();
+        } else {
+          this.locales.push({...this.locale});
+          this.localeService.locale = new Locale();
           alert('success :  saved')
         }
       }
@@ -23,8 +23,9 @@ export class LocaleCreateComponent {
   }
 
 
-  constructor(private localeService:LocaleService) {
+  constructor(private localeService: LocaleService) {
   }
+
   get locale(): Locale {
     return this.localeService.locale;
   }

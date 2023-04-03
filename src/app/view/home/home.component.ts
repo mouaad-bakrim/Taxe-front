@@ -7,13 +7,14 @@ import {OrderDetailsService} from "../../service/order-details.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
-  constructor(private service:OrderDetailsService) {
+  constructor(private service: OrderDetailsService) {
     let js: HTMLScriptElement = document.createElement("script");
-    js.src='assets/js/main.js';
+    js.src = 'assets/js/main.js';
     document.body.appendChild(js);
   }
+
   ngOnInit(): void {
     console.log(history.state.exemple);
   }

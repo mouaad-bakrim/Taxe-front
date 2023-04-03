@@ -7,19 +7,22 @@ import {TauxtaxetrimestrielService} from "../../../controller/service/tauxtaxetr
   templateUrl: './taux-taxe-trimestriel-list.component.html',
   styleUrls: ['./taux-taxe-trimestriel-list.component.css']
 })
-export class TauxTaxeTrimestriellistComponent implements OnInit{
-  edit =false;
+export class TauxTaxeTrimestriellistComponent implements OnInit {
+  edit = true
+
   ngOnInit(): void {
     this.findAll();
   }
 
-  public findAll():void{
+  public findAll(): void {
     this.tauxTaxeTrimestrielService.findAll().subscribe(
       data => this.tauxTaxeTrimestriels = data
     );
   }
-  constructor(private tauxTaxeTrimestrielService:TauxtaxetrimestrielService) {
+
+  constructor(private tauxTaxeTrimestrielService: TauxtaxetrimestrielService) {
   }
+
   get tauxTaxeTrimestriel(): TauxTaxeTrimestriel {
     return this.tauxTaxeTrimestrielService.tauxTaxeTrimestriel;
   }
@@ -36,18 +39,6 @@ export class TauxTaxeTrimestriellistComponent implements OnInit{
     this.tauxTaxeTrimestrielService.tauxTaxeTrimestriels = value;
   }
 
-  /*public save(): void{
-    this.tauxTaxeTrimestrielService.save(this.tauxTaxeTrimestriel).subscribe(
-      data => {
-        if (data == null) {
-          alert('failure : ref exist')
-        }else{
-          //this.tauxTaxeTrimestriel = null;
-          alert('success : tauxTaxeTrimestriel save')
-        }
-      }
-    );
-  }*/
 
 }
 

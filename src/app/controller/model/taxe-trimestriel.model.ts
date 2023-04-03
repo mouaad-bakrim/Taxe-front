@@ -4,7 +4,7 @@ import {TauxTaxeTrimestriel} from "./taux-taxe-trimestriel.model";
 
 export class TaxeTrimestriel {
   public id !: number;
-  public trimestre !:number;
+  public trimestre !: number;
   public NombreDeMoisRetard!: number;
   public nombreDeNuite !: number;
   public montantBase!: number;

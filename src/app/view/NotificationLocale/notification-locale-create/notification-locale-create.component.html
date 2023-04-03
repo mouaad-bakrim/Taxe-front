@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -8,26 +7,31 @@
       </div>
       <div class="modal-body">
 
-        <form  >
+        <form>
           <div class="mb-3">
-            <label  class="form-label">numero </label>
-            <input type="text"  class="form-control" name="numero" aria-describedby="emailHelp" [(ngModel)]="notificationLocale.numero">
+            <label class="form-label">numero </label>
+            <input type="text" class="form-control" name="numero" aria-describedby="emailHelp"
+                   [(ngModel)]="notificationLocale.numero">
           </div>
           <div class="mb-3">
-            <label  class="form-label">trimestre </label>
-            <input type="text"  class="form-control"  name="trimestre" aria-describedby="emailHelp" [(ngModel)]="notificationLocale.trimestre">
+            <label class="form-label">trimestre </label>
+            <input type="text" class="form-control" name="trimestre" aria-describedby="emailHelp"
+                   [(ngModel)]="notificationLocale.trimestre">
           </div>
           <div class="mb-3">
-            <label  class="form-label">Annee </label>
-            <input type="text"  class="form-control" name="annee" aria-describedby="emailHelp" [(ngModel)]="notificationLocale.annee">
+            <label class="form-label">Annee </label>
+            <input type="text" class="form-control" name="annee" aria-describedby="emailHelp"
+                   [(ngModel)]="notificationLocale.annee">
           </div>
           <div class="mb-3">
-            <label  class="form-label">mantant</label>
-            <input type="text"  class="form-control" name="mantantEstimation"  aria-describedby="emailHelp" [(ngModel)]="notificationLocale.mantantEstimation">
+            <label class="form-label">mantant</label>
+            <input type="text" class="form-control" name="mantantEstimation" aria-describedby="emailHelp"
+                   [(ngModel)]="notificationLocale.mantantEstimation">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Notification</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="save()">Add Notification
+            </button>
           </div>
         </form>
 

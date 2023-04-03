@@ -1,0 +1,43 @@
+<h1 class="m-4 text-danger">Edit TauxTaxeTrimestriel</h1>
+<div class="card">
+  <div class="card-footer">Edit TauxTaxeTrimestriel {{tauxTaxeTrimestriel|json}}</div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input id="id" type="text" [(ngModel)]="tauxTaxeTrimestriel.id " class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="pourcentageRetard">pourcentageRetard</label>
+      <input id="pourcentageRetard" type="text" [(ngModel)]="tauxTaxeTrimestriel.pourcentageRetard "
+             class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="pourcentageMajoration">pourcentageMajoration</label>
+      <input id="pourcentageMajoration" type="number" [(ngModel)]="tauxTaxeTrimestriel.pourcentageMajoration"
+             class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="montantParNuite">montantParNuite </label>
+      <input id="montantParNuite" type="number" [(ngModel)]="tauxTaxeTrimestriel.montantParNuite" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dateApplicationFin">dateApplicationFin</label>
+      <input id="dateApplicationFin" type="number" [(ngModel)]="tauxTaxeTrimestriel.dateApplicationFin"
+             class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="date">date</label>
+      <input id="date" type="number" [(ngModel)]="tauxTaxeTrimestriel.date" class="form-control">
+    </div>
+
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-danger btn-lg" (click)="update()"> Update</button>
+  </div>
+
+
+</div>

@@ -3,27 +3,28 @@ import {TauxtaxeanuelleService} from "../../../controller/service/tauxtaxeanuell
 import {TauxTaxeAnuelle} from "../../../controller/model/taux-taxe-anuelle.model";
 
 
-
-Component({
+@Component({
   selector: 'app-taux-taxe-anuelle-list',
   templateUrl: './taux-taxe-anuelle-list.component.html',
   styleUrls: ['./taux-taxe-anuelle-list.component.css']
 })
 
 export class TauxTaxeAnuelleListComponent implements OnInit {
-  edit =false;
 
 
   ngOnInit(): void {
-    this.findAll();}
+    this.findAll();
+  }
 
-  public findAll():void{
+  public findAll(): void {
     this.tauxtaxeanuelleService.findAll().subscribe(
       data => this.tauxTaxeAnuelles = data
     );
   }
 
-  constructor(private tauxtaxeanuelleService: TauxtaxeanuelleService) {}
+  constructor(private tauxtaxeanuelleService: TauxtaxeanuelleService) {
+  }
+
   get tauxTaxeAnuelle(): TauxTaxeAnuelle {
     return this.tauxtaxeanuelleService.tauxTaxeAnuelle;
     ;

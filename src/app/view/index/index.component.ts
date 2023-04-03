@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {OrderDetailsService} from "../../service/order-details.service";
 
 
@@ -11,6 +11,7 @@ export class IndexComponent implements OnInit {
   constructor() {
 
   }
+
   ngOnInit(): void {
 
   }

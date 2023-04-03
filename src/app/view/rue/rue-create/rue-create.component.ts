@@ -5,9 +5,10 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './rue-create.component.html',
   styleUrls: ['./rue-create.component.css']
 })
-export class RueCreateComponent implements OnInit{
+export class RueCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
