@@ -2,6 +2,7 @@
   position: relative;
   float: right;
 }
+
 .search-box input {
   height: 34px;
   border-radius: 20px;
@@ -9,9 +10,11 @@
   border-color: #ddd;
   box-shadow: none;
 }
+
 .search-box input:focus {
   border-color: #3FBAE4;
 }
+
 .search-box i {
   color: #a0a5b1;
   position: absolute;
@@ -20,24 +23,27 @@
   left: 10px;
 }
 
-.toolbar{
+.toolbar {
   height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: -43px;
 }
+
 .table-wrapper {
   margin: 30px auto;
   background: #fff;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
+
 .pagination {
   float: right;
   margin: 0 0 5px;
 }
+
 .pagination li a {
   border: none;
   font-size: 95%;
@@ -50,30 +56,38 @@
   text-align: center;
   padding: 0;
 }
+
 .pagination li a:hover {
   color: #666;
 }
+
 .pagination li.active a {
   background: #03A9F4;
 }
+
 .pagination li.active a:hover {
   background: #0397d6;
 }
+
 .pagination li.disabled i {
   color: #ccc;
 }
+
 .pagination li i {
   font-size: 16px;
   padding-top: 6px
 }
+
 .table-title {
   padding-bottom: 0;
   margin: 0 0 10px;
 }
+
 .table-title h2 {
   margin: 8px 0 0;
   font-size: 22px;
 }
-.modal-title{
+
+.modal-title {
   margin-left: auto;
 }

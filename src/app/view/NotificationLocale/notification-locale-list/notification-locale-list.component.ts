@@ -7,25 +7,27 @@ import {NotificationLocale} from "../../../controller/model/notification-local.m
   templateUrl: './notification-locale-list.component.html',
   styleUrls: ['./notification-locale-list.component.css']
 })
-export class NotificationLocaleListComponent implements OnInit{
+export class NotificationLocaleListComponent implements OnInit {
   ngOnInit(): void {
     this.findAll();
   }
-  constructor(private notificationLocaleSevice: NotificationLocaleSevice) {}
 
-
-
-  public findAll():void {
-    this.notificationLocaleSevice.findAll().subscribe(data => {
-      this.notificationLocales=data;
-
-     });
+  constructor(private notificationLocaleSevice: NotificationLocaleSevice) {
   }
-  public deleteById(notificationLocale:NotificationLocale,  index: number): void {
+
+
+  public findAll(): void {
+    this.notificationLocaleSevice.findAll().subscribe(data => {
+      this.notificationLocales = data;
+
+    });
+  }
+
+  public deleteById(notificationLocale: NotificationLocale, index: number): void {
     this.notificationLocaleSevice.deleteById(notificationLocale.id).subscribe(data => {
-      if (data>0){
-        this.notificationLocales.splice(index,1);
-      }else {
+      if (data > 0) {
+        this.notificationLocales.splice(index, 1);
+      } else {
         alert('DEL ERROR')
       }
     });
@@ -37,7 +39,7 @@ export class NotificationLocaleListComponent implements OnInit{
   }
 
   set notificationLocale(value: NotificationLocale) {
-    this.notificationLocaleSevice.notificationLocale= value;
+    this.notificationLocaleSevice.notificationLocale = value;
   }
 
   get notificationLocales(): Array<NotificationLocale> {
@@ -45,7 +47,7 @@ export class NotificationLocaleListComponent implements OnInit{
   }
 
   set notificationLocales(value: Array<NotificationLocale>) {
-    this.notificationLocaleSevice.notificationLocales= value;
+    this.notificationLocaleSevice.notificationLocales = value;
   }
 
 }

@@ -9,12 +9,13 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   templateUrl: './redevable-create.component.html',
   styleUrls: ['./redevable-create.component.css']
 })
-export class RedevableCreateComponent implements OnInit{
+export class RedevableCreateComponent implements OnInit {
 
 
+  constructor(private redevableService: RedevableService) {
+  }
 
-  constructor( private redevableService : RedevableService) { }
-  ngOnInit():void {
+  ngOnInit(): void {
 
   }
 
@@ -22,12 +23,13 @@ export class RedevableCreateComponent implements OnInit{
   public save(): void {
     this.redevableService.save()
   }
+
   get redevable(): Redevable {
     return this.redevableService.redevable;
   }
 
   set redevable(value: Redevable) {
-    this.redevableService.redevable =value;
+    this.redevableService.redevable = value;
   }
 
   get redevables(): Array<Redevable> {
@@ -35,7 +37,7 @@ export class RedevableCreateComponent implements OnInit{
   }
 
   set redevables(value: Array<Redevable>) {
-    this.redevableService.redevables=value;
+    this.redevableService.redevables = value;
   }
 
 }

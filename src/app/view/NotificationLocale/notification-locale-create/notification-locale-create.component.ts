@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NotificationLocale} from "../../../controller/model/notification-local.model";
 import {NotificationLocaleSevice} from "../../../controller/service/notification-locale-sevice.service";
 
@@ -8,20 +8,21 @@ import {NotificationLocaleSevice} from "../../../controller/service/notification
   styleUrls: ['./notification-locale-create.component.css']
 })
 export class NotificationLocaleCreateComponent {
-  constructor(private notificationLocaleSevice:NotificationLocaleSevice) {
+  constructor(private notificationLocaleSevice: NotificationLocaleSevice) {
   }
+
   ngOnInit(): void {
 
   }
 
-  public save() : void{
+  public save(): void {
     this.notificationLocaleSevice.save().subscribe(
       data => {
         if (data == null) {
           alert('failure : error exist')
-        }else{
-         this.notificationLocales.push({...this .notificationLocale});
-         this.notificationLocaleSevice.notificationLocale=new NotificationLocale();
+        } else {
+          this.notificationLocales.push({...this.notificationLocale});
+          this.notificationLocaleSevice.notificationLocale = new NotificationLocale();
           alert('success :  saved')
         }
       }

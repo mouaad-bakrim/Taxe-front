@@ -6,13 +6,14 @@ import {OrderDetailsService} from "../../../service/order-details.service";
   templateUrl: './taxe-trimestriel-ceate.component.html',
   styleUrls: ['./taxe-trimestriel-ceate.component.css']
 })
-export class TaxeTrimestrielCeateComponent implements OnInit{
+export class TaxeTrimestrielCeateComponent implements OnInit {
 
-  constructor(private service:OrderDetailsService) {
+  constructor(private service: OrderDetailsService) {
     let js: HTMLScriptElement = document.createElement("script");
-    js.src='assets/js/mouad.js';
+    js.src = 'assets/js/mouad.js';
     document.body.appendChild(js);
   }
+
   ngOnInit(): void {
     console.log(history.state.exemple);
   }

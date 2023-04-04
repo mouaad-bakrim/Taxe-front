@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {TaxeTrimestriel} from "../model/taxe-trimestriel.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
@@ -7,12 +7,14 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 export class TaxeTrimestrielService {
-  private _taxeTtrimestriel={} as TaxeTrimestriel;
-  private _taxeTtrimestriels=[] as Array<TaxeTrimestriel>;
+  private _taxeTtrimestriel = {} as TaxeTrimestriel;
+  private _taxeTtrimestriels = [] as Array<TaxeTrimestriel>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
+
   public save(): void {
-    this.http.post<TaxeTrimestriel>(environment.url+'taxeSejourTrimestrie/', this.taxeTtrimestriel).subscribe(data => {
+    this.http.post<TaxeTrimestriel>(environment.url + 'taxeSejourTrimestrie/', this.taxeTtrimestriel).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
@@ -20,8 +22,9 @@ export class TaxeTrimestrielService {
       }
     });
   }
+
   public findAll(): void {
-    this.http.get<Array<TaxeTrimestriel>>(environment.url+'taxeSejourTrimestrie/').subscribe(
+    this.http.get<Array<TaxeTrimestriel>>(environment.url + 'taxeSejourTrimestrie/').subscribe(
       data => {
         this._taxeTtrimestriels = data;
       }, error => {

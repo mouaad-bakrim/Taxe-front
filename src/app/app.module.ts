@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './view/home/home.component';
-import { IndexComponent } from './view/index/index.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './view/home/home.component';
+import {IndexComponent} from './view/index/index.component';
 import {NavbarComponent} from "./shaer/navbar/navbar.component";
 import {RueCreateComponent} from "./view/rue/rue-create/rue-create.component";
 import {RedevableCreateComponent} from "./view/redevable/redevable-create/redevable-create.component";
@@ -11,10 +11,14 @@ import {RouterModule, RouterOutlet, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule, homeLink, indexLink} from "./app-routing.module";
 import {RedevableListComponent} from "./view/redevable/redevable-list/redevable-list.component";
-import {TauxTaxeAnuelleCreateComponent} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-create/taux-taxe-anuelle-create.component";
+import {
+  TauxTaxeAnuelleCreateComponent
+} from "./view/taux-taxe-anuelle/taux-taxe-anuelle-create/taux-taxe-anuelle-create.component";
 import {TaxeAnuelleCreateComponent} from "./view/taxe-anuelle/taxe-anuelle-create/taxe-anuelle-create.component";
 import {HttpClientModule} from "@angular/common/http";
-import {TaxeTrimestrielCeateComponent} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
+import {
+  TaxeTrimestrielCeateComponent
+} from "./view/taxe-trimestriel/taxe-trimestriel-ceate/taxe-trimestriel-ceate.component";
 import {CategoriesCreateComponent} from "./view/categorie/categorie-create/categories-create.component";
 import {
   TauxTaxeTrimestrielCreateComponent
@@ -35,15 +39,17 @@ import {TaxeAnuelleListComponent} from "./view/taxe-anuelle/taxe-anuelle-list/ta
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 const appRoutes: Routes = [
-  {path:indexLink,component:IndexComponent},
-  {path:homeLink,component:HomeComponent},
-  {path:'redevable-create',component:RedevableCreateComponent},
-  {path:'redevable-list',component:RedevableListComponent},
-  {path:'rue-create',component:RueCreateComponent},
-  {path:'taxe-anuelle-creat',component:TaxeAnuelleCreateComponent},
-  {path:'locale-list',component:LocaleListComponent},
-  {path:'notification-locale-list',component:NotificationLocaleListComponent}
+  {path: indexLink, component: IndexComponent},
+  {path: homeLink, component: HomeComponent},
+  {path: 'redevable-create', component: RedevableCreateComponent},
+  {path: 'redevable-list', component: RedevableListComponent},
+  {path: 'rue-create', component: RueCreateComponent},
+  {path: 'taxe-anuelle-creat', component: TaxeAnuelleCreateComponent},
+  {path: 'locale-list', component: LocaleListComponent},
+  {path: 'notification-locale-list', component: NotificationLocaleListComponent},
+  {path: 'taux-taxe-trimestriel-create', component: TauxTaxeTrimestrielCreateComponent},
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +61,7 @@ const appRoutes: Routes = [
     LocaleCreateComponent,
     LocaleListComponent,
     TauxTaxeAnuelleCreateComponent,
+    TauxTaxeAnuelleListComponent,
     TaxeAnuelleCreateComponent,
     TaxeAnuelleListComponent,
     TaxeTrimestrielCeateComponent,
@@ -64,7 +71,7 @@ const appRoutes: Routes = [
     CategoriesCreateComponent,
     TauxTaxeTrimestrielCreateComponent,
     RedevableEditComponent,
-    TauxTaxeTrimestriellistComponent
+    TauxTaxeTrimestriellistComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,4 +86,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

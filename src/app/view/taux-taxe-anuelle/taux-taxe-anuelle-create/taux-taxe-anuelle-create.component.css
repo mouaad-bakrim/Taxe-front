@@ -12,7 +12,7 @@ body {
 }
 
 .containere {
-position: fixed;
+  position: fixed;
 
   top: 9%;
   left: .7em;
@@ -156,7 +156,8 @@ position: fixed;
   border-color: #6A679E;
   outline: none;
 }
-label{
+
+label {
   font-size: 2.5vh;
   font-weight: bold;
   color: #320254;
@@ -167,7 +168,6 @@ label{
 
 
 button login__submit
-
 .social-login {
   position: absolute;
   height: 140px;
@@ -175,6 +175,7 @@ button login__submit
   text-align: center;
   bottom: 0px;
   right: 0px;
-  color: #fff;}
+  color: #fff;
+}
 
 

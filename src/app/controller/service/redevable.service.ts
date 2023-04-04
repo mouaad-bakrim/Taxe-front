@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Redevable} from "../model/redevable.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
@@ -23,18 +23,17 @@ export class RedevableService {
       }
     });
   }
+
   public deleteByCin(cin: string): Observable<number> {
-      return this.http.delete<number>(environment.url + 'redevable/cin/' + cin);
-    }
-    public update(redevable:Redevable): Observable<number>{
-    return this.http.put<number>(environment.url+'redevable/cin/',redevable);
-    }
-  public findAll(): void {
-    this.http.get<Array<Redevable>>(environment.url+'redevable/').subscribe(data => {
-   this.redevables=data;
-    },error => {
-      alert('Error');
+    return this.http.delete<number>(environment.url + 'redevable/cin/' + cin);
   }
+
+  public findAll(): void {
+    this.http.get<Array<Redevable>>(environment.url + 'redevable/').subscribe(data => {
+        this.redevables = data;
+      }, error => {
+        alert('Error');
+      }
     );
   }
 
@@ -44,10 +43,10 @@ export class RedevableService {
   }
 
   get redevable(): Redevable {
-    if (this._redevable == null){
+    if (this._redevable == null) {
       this._redevable == new Redevable();
     }
-    return <Redevable> this._redevable;
+    return <Redevable>this._redevable;
   }
 
   set redevable(value: Redevable) {
@@ -61,6 +60,4 @@ export class RedevableService {
   set redevables(value: Array<Redevable>) {
     this._redevables = value;
   }
-
-
 }

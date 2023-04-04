@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Rue} from "../model/rue.model";
 import {HttpClient} from "@angular/common/http";
 import {Redevable} from "../model/redevable.model";
@@ -8,12 +8,14 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 export class RueService {
-  private _rue={} as Rue;
-  private _rues=[] as Array<Rue>;
+  private _rue = {} as Rue;
+  private _rues = [] as Array<Rue>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
+
   public save(): void {
-    this.http.post<Rue>(environment.url+'rue/', this.rue).subscribe(data => {
+    this.http.post<Rue>(environment.url + 'rue/', this.rue).subscribe(data => {
       if (data != null) {
         alert('save success');
       } else {
@@ -21,8 +23,9 @@ export class RueService {
       }
     });
   }
+
   public findAll(): void {
-    this.http.get<Array<Rue>>(environment.url+'rue/').subscribe(
+    this.http.get<Array<Rue>>(environment.url + 'rue/').subscribe(
       data => {
         this._rues = data;
       }, error => {
